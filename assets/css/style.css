@@ -6,12 +6,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@font-face {
+    font-family: 'Roasting';
+    src: url('../fonts/roasting/Roasting.ttf');
+}
+p{
+    margin-bottom: 0 !important;
+}
 .banner{
-    height: 100vh;
     position: relative;
+    height: 100vh;
+}
+.carousel-fade,
+.carousel-fade .carousel-inner,
+.carousel-fade img{
+    height: 100vh;
+}
+.carousel-fade img{
+    object-fit: cover;
+    position: relative;
+    
 }
 .carousel-fade .carousel-item {
+    max-height: 100vh;
     opacity: 0;
     transition-duration: 2s;
     transition-property: opacity;
@@ -66,6 +83,31 @@ a.login-btn{
     border-radius: 20px;
     margin-right: 0;
     padding: 7px 15px;
+}
+.banner-title{
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    position: absolute;
+    width: calc(100vw - 20%);
+    height: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 319px;
+}
+.banner-title .title-1{
+    font-family: 'Roasting';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 143.508px;
+    /* line-height: 260px; */
+}
+.banner-title .title-2{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
 }
 
 
