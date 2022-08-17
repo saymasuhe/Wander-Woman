@@ -1,0 +1,87 @@
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner{
+    height: 100vh;
+    position: relative;
+}
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: 2s;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    opacity: 0;
+}
+
+.carousel-fade  .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+}
+
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+}
+
+.logo{
+    width: 158px;
+    object-fit: contain;
+}
+.top-navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 16px;
+}
+a.login-btn{
+    color: #FFFFFF;
+    width: 87px;
+    height: 38.96px;
+    background: #D83941;
+    border-radius: 20px;
+    margin-right: 0;
+    padding: 7px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1400px){
+    .container {
+        max-width: 1340px;
+    }
+}
+  
