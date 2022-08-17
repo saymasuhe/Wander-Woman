@@ -1,5 +1,7 @@
 /* Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -10,8 +12,16 @@
     font-family: 'Roasting';
     src: url('../fonts/roasting/Roasting.ttf');
 }
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand/quicksand.book-regular.otf');
+}
 p{
     margin-bottom: 0 !important;
+}
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
 }
 .banner{
     position: relative;
@@ -61,13 +71,29 @@ p{
     width: 100%;
     background: transparent;
 }
-
+header .navigation{
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+header .navigation li{
+    padding-left: 2rem;
+}
+.top-navbar.sticky{
+    background: #fff;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 12%);
+    z-index: 1;
+    transition: .5s ease;
+}
+.top-navbar.sticky .logo{
+    width: 100px;
+}
 .logo{
     width: 158px;
     object-fit: contain;
+    transition: .5s ease;
 }
 .top-navbar a{
-    text-decoration: none;
     font-size: 20px;
     font-weight: 600;
     line-height: 48px;
@@ -82,11 +108,20 @@ a.login-btn{
     background: #D83941;
     border-radius: 20px;
     margin-right: 0;
-    padding: 7px 15px;
+    padding: 8px 16px;
+}
+.mbtn{
+    /* opacity: .8; */
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+.mbtn:hover{
+    color: #fff;
+    background-color: #af3037;
+    box-shadow: 0px 3px 4px #00000063;
 }
 .banner-title{
     text-align: center;
-    text-transform: capitalize;
     color: #FFFFFF;
     position: absolute;
     width: calc(100vw - 20%);
@@ -97,19 +132,86 @@ a.login-btn{
 }
 .banner-title .title-1{
     font-family: 'Roasting';
-    font-style: normal;
+    text-transform: capitalize;
     font-weight: 400;
     font-size: 143.508px;
-    /* line-height: 260px; */
 }
 .banner-title .title-2{
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 42px;
+    margin-bottom: 2.5rem !important;
 }
-
+a.banner-btn{
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 48px;
+    background: #D83941;
+    border-radius: 30px;
+    padding: 15px 32px;
+}
+.section{
+    text-align: center;
+    padding: 5rem 0;
+}
+p.section-title{
+    font-family: 'Roasting';
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 133px;
+    text-transform: capitalize;
+    color: #D83941;
+}
+p.section-details{
+    font-family: 'Quicksand';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 48px;
+}
+.search-tour{
+    background: #FFF4F5;
+}
+.search {
+    width: 90%;
+    text-align: left;
+}
+.search-box{
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.search-txt{
+    border: none;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: bottom;
+    padding-left: 1rem;
+}
+.search-txt::placeholder{
+    color: #939393;
+}
+.search-txt:focus{
+    outline: none;
+}
+.search-btn{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+    color: #F9EFF0;
+    background: #D83941;
+    border-radius: 47px;
+    padding: 15px 25px;
+}
 
 
 
@@ -123,7 +225,7 @@ a.login-btn{
 
 @media (min-width: 1400px){
     .container {
-        max-width: 1340px;
+        max-width: 1400px;
     }
 }
   

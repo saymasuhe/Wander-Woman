@@ -15,7 +15,7 @@
 
 <body>
     <div class="page-content">
-        <div class="banner">
+        <section class="banner">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -31,7 +31,16 @@
             </div>
             <div class="top-navbar">
                 <div class="container">
-                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 w-100">
+                    <header class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 w-100">
+                        <img src="assets/images/logo1.png" alt="" class="logo">
+                        <ul class="navigation mb-0">
+                            <li><a class="p-2" href="#">Discover</a></li>
+                            <li><a class="p-2" href="#">About Us</a></li>
+                            <li><a class="p-2" href="#">Sign Up</a></li>
+                            <li><a class="login-btn mbtn" href="#">Login</a></li>
+                        </ul>
+                    </header>
+                    <!-- <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 w-100">
                         <img src="assets/images/logo1.png" alt="" class="logo">
                         <nav class="my-2 my-md-0 mr-md-3">
                           <a class="p-2" href="#">Discover</a>
@@ -39,15 +48,39 @@
                           <a class="p-2" href="#">Sign Up</a>
                           <a class="login-btn" href="#">Login</a>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="banner-title">
                 <p class="title-1">Wander Woman</p>
                 <p class="title-2">The most exciting community of women, <br> who love to explore.</p>
-                <a href="#" class="btn">Join The Community</a>
+                <a href="#" class="banner-btn mbtn">Join The Community</a>
             </div>
-        </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="section-title">Unleash Your Inner Travelling Desire</p>
+                <p class="section-details">Time to be bold and explore the unknown with like minded-female travelers. Feel secured and be a part of a community that loves to fly, celebrates the sense of freedom and womanhood. What are you waiting for then? Start now with the most exciting tour planning and consultation from the Wander Squad.</p>
+            </div>
+        </section>
+
+        <section class="section search-tour">
+            <div class="container">
+                <p class="section-title">guided tours</p>
+                <p class="section-details mb-5">Looking for a fun and unique way to explore a new destination? We offer nice group tours led by Trained Team Leaders & planned by travel experts, so you can relax and enjoy your trip. Our tours are designed for women who want to see the world and meet new friends.</p>
+                <p class="section-details mb-5">We offer a variety of tour options, from city breaks to beach vacations to adventurous treks. Whether you're looking to explore a new culture or just escape the hustle and bustle of everyday life, Wander Women has a tour for you.</p>
+                <p class="section-details">So what are you waiting for? Book your spot on a Wander Women tour today!</p>
+
+                <div class="search-box align-items-center mt-4">
+                    <div class="search d-flex">
+                        <img src="assets/images/Vector.png" alt="" class="search-img ml-3">
+                        <input  class="search-txt w-100" type="text" name="search" placeholder="Where are you going">
+                    </div>
+                    <a class="search-btn mbtn" href="#">Search</a>
+                </div>
+            </div>
+        </section>
     </div>
 
 
@@ -64,6 +97,10 @@
         $('.carousel').carousel({
             interval: 4000
         })
+        window.addEventListener('scroll', function(){
+            const hr = document.querySelector('.top-navbar');
+            hr.classList.toggle("sticky", window.scrollY > 0);
+        });
     </script>
 </body>
 </html>
