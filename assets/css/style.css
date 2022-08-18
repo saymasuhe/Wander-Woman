@@ -114,15 +114,15 @@ a.login-btn{
     margin-right: 0;
     padding: 8px 16px;
 }
+
 .mbtn{
     /* opacity: .8; */
     border: 1px solid transparent;
-    transition: all .4s ease;
+    transition: all .3s ease;
 }
 .mbtn:hover{
     color: #fff;
     background-color: #af3037;
-    box-shadow: 0px 3px 4px #00000063;
 }
 .banner-title{
     text-align: center;
@@ -472,6 +472,95 @@ section.testimonial{
     opacity: unset;
 }
 
+.partners{
+    background: #FFF4F5;
+}
+.partners p.section-title{
+    line-height: 75px;
+    margin-bottom: 2rem !important;
+    max-width: 600px;
+}
+p.partner-title-details{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 45px;
+    color: #000000;
+    max-width: 600px;
+}
+.partners .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.partners .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sqr-btn{
+    background: #D83941;
+    border-radius: 10px;   
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #FFFFFF; 
+    padding: 22px 25px;
+    transition: all .3s ease;
+}
+.sqr-btn:hover{
+    color: #fff;
+    background-color: #af3037;    box-shadow: 0px 2px 6px #00000063;
+}
+
+
+.shop {
+    background: url(../images/maldives-island.jpg);
+    background-size:auto;
+    background-attachment: fixed;
+    position: relative;
+}
+.shop .contact{
+    text-align: left;
+    background: #FFDEFC;
+}
+.shop p.partner-title-details{
+    line-height: 27px;
+}
+.shop .gradient{
+    height: 100px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+.shop .wrap{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+}
+
+footer{
+    background: #122833;
+}
+footer p, footer a{
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+footer ul{
+    list-style: none;
+}
+footer ul li a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+.social-icons img{
+    margin-left: 1rem;
+}
 
 
 
@@ -479,6 +568,11 @@ section.testimonial{
 
 
 @media (min-width: 1400px){
+    .container {
+        max-width: 1400px;
+    }
+}
+@media (max-width: 991.99px){
     .container {
         max-width: 1400px;
     }

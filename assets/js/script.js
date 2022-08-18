@@ -1,3 +1,9 @@
+// Menu bar
+$('.bar-icon').click(function(){
+    $('.responsive-nav').toggleClass('show-nav');
+});
+
+
 $('.carousel').carousel({
     interval: 4000
 });
@@ -9,6 +15,7 @@ window.addEventListener('scroll', function(){
 
 $(function(){
     $('.mhn-slide').owlCarousel({
+        loop:true,
         nav:true,
         slideBy:1,
         rewind:false,
