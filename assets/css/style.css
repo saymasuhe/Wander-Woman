@@ -866,7 +866,31 @@ a.read{
     margin: 20px 5px 0 5px;
 }
 .img-wrap{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+.img-wrap:hover > .img-top{
+    visibility: visible;
+}
+.img-wrap:hover > .img{
+    visibility: hidden;
+}
+.img-wrap img{
+    max-height: 230px;
     background: url(../images/blob1.png) center no-repeat;
+    /* transition: all .3s ease; */
+}
+.img-wrap:hover > img{
+    background: url(../images/blob2.png) center no-repeat;
+    background-size: contain;
+}
+.img-wrap .img-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
 }
 
 .contact-us{
@@ -910,6 +934,7 @@ a.read{
     font-size: 20px;
     line-height: 29px;
 }
+
 
 
 @media (max-width: 1400px){
