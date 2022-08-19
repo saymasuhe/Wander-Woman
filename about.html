@@ -28,6 +28,14 @@
     <!-- Timelinr -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="assets/js/jquery.timelinr-0.9.7.js"></script>
+
+    
+    <style>
+
+		/* --- Start progress bar --- */
+
+ 
+    </style>
 </head>
 
 <body>
@@ -79,8 +87,63 @@
             </div>
         </div>
 
-        <section class="timeline-section">
-            <!-- <div class="container">
+        <section class="timeline section">
+            <div class="container">
+                <p class="section-title text-center">the road we took</p>
+    
+                <div class="process-wrapper mt-3">
+                    <div id="progress-bar-container">
+                        <ul>
+                            <li class="step step01 active"><div class="step-inner">2017</div></li>
+                            <li class="step step02"><div class="step-inner">2018</div></li>
+                            <li class="step step03"><div class="step-inner">2019</div></li>
+                            <li class="step step04"><div class="step-inner">2020</div></li>
+                            <li class="step step05"><div class="step-inner">2021</div></li>
+                            <li class="step step06"><div class="step-inner">2022</div></li>
+                        </ul>
+                        
+                        <div id="line">
+                            <div id="line-progress"></div>
+                        </div>
+                    </div>
+    
+                    <div id="progress-content-section">
+                        <div class="section-content 2017 active">
+                            <p class="title">Fundraising</p>
+                            <p>Formed the community over Facebook. Started with 200 members in September. </p>
+                        </div>
+                        
+                        <div class="section-content 2018">
+                            <p class="title">The Start</p>
+                            <p>Registered as a travel agency for women and initiated hosting guided tours worldwide. </p>
+                        </div>
+                        
+                        <div class="section-content 2019">
+                            <p class="title">Guided Tours</p>
+                            <p>Formally built WW Squad and launched 100+ trips. </p>
+                        </div>
+                        
+                        <div class="section-content 2020">
+                            <p class="title">Building The Squad</p>
+                            <p>Received The Diana Award for contribution to women empowerment. </p>
+                        </div>
+                        
+                        <div class="section-content 2021">
+                            <p class="title">Recognition</p>
+                            <p>Reformed as Travel-tech startup post pandemic. </p>
+                        </div>
+                        
+                        <div class="section-content 2022">
+                            <p class="title">Pendemic Hits</p>
+                            <p>Raised fund and received UNLEASH+ award.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="timeline-section">
+            <div class="container">
                 <div id="timeline">
                     <ul id="dates">
                     <li><a href="#1900">1900</a></li>
@@ -151,8 +214,8 @@
                     <a href="#" id="next">+</a>
                     <a href="#" id="prev">-</a>
                 </div>
-            </div> -->
-        </section>
+            </div>
+        </section> -->
 
         <section class="section founders">
             <div class="container text-left">
@@ -386,14 +449,50 @@
         // Menu bar
         $('.bar-icon').click(function(){
             $('.responsive-nav').toggleClass('show-nav');
-            // $('.page-content').toggle();
         });
         
         $(function(){
-        $().timelinr({
-            arrow: false
-        })
+            $().timelinr({
+                arrow: false
+            })
         });
+    
+        $(".step").click( function() {
+            $(this).addClass("active").prevAll().addClass("active");
+            $(this).nextAll().removeClass("active");
+        });
+    
+        $(".step01").click( function() {
+            $("#line-progress").css("width", "3%");
+            $(".2017").addClass("active").siblings().removeClass("active");
+        });
+    
+        $(".step02").click( function() {
+            $("#line-progress").css("width", "20%");
+            $(".2018").addClass("active").siblings().removeClass("active");
+        });
+    
+        $(".step03").click( function() {
+            $("#line-progress").css("width", "40%");
+            $(".2019").addClass("active").siblings().removeClass("active");
+        });
+    
+        $(".step04").click( function() {
+            $("#line-progress").css("width", "60%");
+            $(".2020").addClass("active").siblings().removeClass("active");
+        });
+    
+        $(".step05").click( function() {
+            $("#line-progress").css("width", "80%");
+            $(".2021").addClass("active").siblings().removeClass("active");
+        });
+    
+        $(".step06").click( function() {
+            $("#line-progress").css("width", "100%");
+            $(".2022").addClass("active").siblings().removeClass("active");
+        });
+    
+     
     </script>
 
 </body>
