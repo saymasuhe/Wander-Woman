@@ -1158,6 +1158,10 @@ a.read{
     }
 }
 @media (max-width: 576px) { 
+    .about-banner .title{
+        font-size: 35px;
+        line-height: 56px;
+    }
     .timeline #progress-bar-container li .step-inner{
         font-size: 14px;
     }
@@ -1206,4 +1210,3 @@ a.read{
         margin-bottom: 1rem;
     }
 }
-  
