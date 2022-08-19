@@ -205,7 +205,7 @@ a.login-btn{
     height: 260px;
     left: 50%;
     transform: translateX(-50%);
-    top: 319px;
+    top: 30%;
 }
 .banner-title .title-1{
     font-family: 'Roasting';
@@ -656,6 +656,24 @@ footer ul li a:hover{
 
 
 
+@media (max-width: 1400px){
+    a.banner-btn{
+        font-size: 14px;
+    }
+    .banner-title .title-1 {
+        font-size: 80px;
+        line-height: 60px;
+    }
+    .banner-title .title-1, 
+    .section-title,
+    p.section-title{
+        margin-bottom: 1rem !important;
+    }
+    .banner-title .title-2{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
 @media (min-width: 1400px){
     .container {
         max-width: 1340px;
@@ -665,6 +683,8 @@ footer ul li a:hover{
     }
 }
 
+@media (max-width: 1200px){
+}
 @media (min-width: 992px){
     header.header {
         display: none;
@@ -675,34 +695,19 @@ footer ul li a:hover{
     /* .page-content {
         position: relative;
     } */
+    .banner-title .title-1 {
+        font-size: 77.508px;
+        line-height: 60px;
+    }
     .container {
         max-width: 1400px;
     }
     .top-navbar{
         display: none;
     }
-    .banner-title .title-1 {
-        font-size: 77.508px;
-        line-height: 60px;
-    }
-    .banner-title{
-        top: 30%;
-    }
-    .banner-title .title-2{
-        font-size: 20px;
-        line-height: 30px;
-    }
-    a.banner-btn{
-        font-size: 14px;
-    }
     p.section-title{
         font-size: 60px;
         line-height: 55px !important;
-    }
-    .banner-title .title-1, 
-    .section-title,
-    p.section-title{
-        margin-bottom: 1rem !important;
     }
     p.section-details,
     .section-title-details {
