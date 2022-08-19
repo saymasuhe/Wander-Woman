@@ -1,16 +1,12 @@
-// Menu bar
-$('.bar-icon').click(function(){
-    $('.responsive-nav').toggleClass('show-nav');
-});
-
-
 $('.carousel').carousel({
     interval: 4000
 });
 
 window.addEventListener('scroll', function(){
     const hr = document.querySelector('.top-navbar');
+    const headerResponsive = document.querySelector('.header-responsive');
     hr.classList.toggle("sticky", window.scrollY > 0);
+    headerResponsive.classList.toggle("sticky", window.scrollY > 0);
 });
 
 $(function(){
@@ -21,8 +17,9 @@ $(function(){
         rewind:false,
         responsive:{
             0:{items:1},
-            480:{items:2},
-            600:{items:3},
+            768:{items:2},
+            992:{items:2},
+            1200:{item:3}
         },
         smartSpeed:200,
         navText:['<img src="assets/images/prev.png" alt="" srcset="">','<img src="assets/images/next.png" alt="" srcset="">']
@@ -31,7 +28,9 @@ $(function(){
 
 $(document).ready(function(){
     $('.counter').counterUp({
-      delay: 10,
-      time: 1200
+        from: 0,
+        to: 999999999999999,
+        speed: 800,
+        refreshInterval: 50,
     });
   });
