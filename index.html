@@ -24,6 +24,36 @@
 
     <!-- fontawesome 5-->
     <script src="https://kit.fontawesome.com/8803f9618d.js" crossorigin="anonymous"></script>
+
+    <style>
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+            width: auto;
+            display: block;
+            top: auto;
+            left: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            min-width: 10em;
+            max-width: 1000px;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 13px 20px;
+            text-decoration: none;
+            transition: .4s;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown:hover .dropdown-content {display: block;}
+
+    </style>
 </head>
 
 <body>
@@ -70,13 +100,23 @@
             </div>
             <div class="top-navbar">
                 <div class="container">
-                    <header class="d-flex align-items-center justify-content-between p-3 px-md-4 w-100">
+                    <header class="d-flex align-items-center justify-content-between p-2 px-md-4 w-100">
                         <img src="assets/images/logo1.png" alt="" class="logo">
                         <ul class="navigation mb-0">
                             <li><a class="" href="index.html">Discover</a></li>
+                            <!-- <li>
+                                <div class="dropdown">
+                                    <a href="index.html" class="dropbtn">Dropdown</a>
+                                    <div class="dropdown-content">
+                                      <a href="#">Link 1</a>
+                                      <a href="#">Link 2</a>
+                                      <a href="#">Link 3</a>
+                                    </div>
+                                </div>
+                            </li> -->
                             <li><a class="" href="about.html">About Us</a></li>
-                            <li><a class="p-2" href="#">Sign Up</a></li>
-                            <li><a class="login-btn mbtn" href="#">Login</a></li>
+                            <li><a class="p-2" href="#">Blog</a></li>
+                            <!-- <li><a class="login-btn mbtn" href="#">Login</a></li> -->
                         </ul>
                     </header>
                 </div>
@@ -98,8 +138,8 @@
         <section class="section search-tour">
             <div class="container">
                 <p class="section-title">guided tours</p>
-                <p class="section-details mb-5">Looking for a fun and unique way to explore a new destination? We offer nice group tours led by Trained Team Leaders & planned by travel experts, so you can relax and enjoy your trip. Our tours are designed for women who want to see the world and meet new friends.</p>
-                <p class="section-details mb-5">We offer a variety of tour options, from city breaks to beach vacations to adventurous treks. Whether you're looking to explore a new culture or just escape the hustle and bustle of everyday life, Wander Women has a tour for you.</p>
+                <p class="section-details mb-3">Looking for a fun and unique way to explore a new destination? We offer nice group tours led by Trained Team Leaders & planned by travel experts, so you can relax and enjoy your trip. Our tours are designed for women who want to see the world and meet new friends.</p>
+                <p class="section-details mb-3">We offer a variety of tour options, from city breaks to beach vacations to adventurous treks. Whether you're looking to explore a new culture or just escape the hustle and bustle of everyday life, Wander Women has a tour for you.</p>
                 <p class="section-details">So what are you waiting for? Book your spot on a Wander Women tour today!</p>
 
                 <div class="search-box align-items-center mt-4">
@@ -170,7 +210,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Cox's Bazar Sea Beach</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Chittagong, Bangladesh</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -180,7 +220,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Mount Bromo</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span> East Java, Indonesia</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -190,7 +230,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Pokhara City </p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Pokhara, Nepal</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -200,7 +240,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Cox's Bazar Sea Beach</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Chittagong, Bangladesh</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -210,7 +250,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Mount Bromo</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span> East Java, Indonesia</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -220,7 +260,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Pokhara City </p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Pokhara, Nepal</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
                         </div>
                     </div>
                 </div>
@@ -242,7 +282,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Cox's Bazar Sea Beach</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Chittagong, Bangladesh</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -252,7 +292,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Mount Bromo</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span> East Java, Indonesia</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -262,7 +302,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Pokhara City </p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Pokhara, Nepal</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -272,7 +312,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Cox's Bazar Sea Beach</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Chittagong, Bangladesh</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -282,7 +322,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Mount Bromo</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span> East Java, Indonesia</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -292,7 +332,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Pokhara City </p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Pokhara, Nepal</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
                         </div>
                     </div>
                 </div>
@@ -315,7 +355,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Cox's Bazar Sea Beach</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Chittagong, Bangladesh</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -325,7 +365,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Mount Bromo</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span> East Java, Indonesia</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -335,7 +375,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Pokhara City </p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Pokhara, Nepal</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -345,7 +385,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Cox's Bazar Sea Beach</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Chittagong, Bangladesh</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -355,7 +395,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Mount Bromo</p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span> East Java, Indonesia</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
                         </div>
                     </div>
                     <div class="mhn-item">
@@ -365,7 +405,7 @@
                                 <a href="#" class="booking-btn">Book Now</a>
                             </div>
                             <p class="news-headline">Pokhara City </p>
-                            <p class="location"><img src="assets/images/tag.png" alt="" srcset=""> <span>Pokhara, Nepal</span> </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
                         </div>
                     </div>
                 </div>
@@ -384,45 +424,59 @@
                 <div class="row mt-5 pb-4">
                     <div class="col-xl-6 col-lg-12 col-md-12 col-12">
                         <div class="wrap">
-                            <div class="facility-title d-flex mb-2">
+                            <div class="d-flex mb-5">
                                 <img src="assets/images/Frame.png" alt="" srcset="">
-                                <p>Expert Trip Guides</p>
+                                <div class="div">
+                                    <p class="facility-title">Expert Trip Guides</p>
+                                    <p class="facility-details">Our dedicated tour coordinators will guide <br> you throughout your trip.</p>
+                                </div>
                             </div>
-                            <p class="facility-details">Our dedicated tour coordinators will guide <br> you throughout your trip.</p>
                         </div>
                         <div class="wrap mt-4">
-                            <div class="facility-title d-flex mb-2">
+                            <div class="d-flex mb-5">
                                 <img src="assets/images/Frame2.png" alt="" srcset="">
-                                <p>Community Support</p>
+                                
+                                <div class="div">
+                                    <p class="facility-title">Community Support</p>
+                                    <p class="facility-details">Get support from a community of more than 33,000 female travelers.</p>
+                                </div>
                             </div>
-                            <p class="facility-details">Get support from a community of more than 33,000 female travelers.</p>
                         </div>
                         <div class="wrap mt-4">
-                            <div class="facility-title d-flex mb-2">
+                            <div class="d-flex mb-5">
                                 <img src="assets/images/Frame3.png" alt="" srcset="">
-                                <p>Flexible Payment Policy</p>
+                                
+                                <div class="div">
+                                    <p class="facility-title">Flexible Payment Policy</p>
+                                    <p class="facility-details">With our Buy now, pay later and  emi facilities available, you can relax and vacate in peace without worrying about payments. </p>
+                                </div>
                             </div>
-                            <p class="facility-details">With our Buy now, pay later and  emi facilities available, you can relax and vacate in peace without worrying about payments. </p>
                         </div>
                         <div class="wrap mt-4">
-                            <div class="facility-title d-flex mb-2">
+                            <div class="d-flex mb-5">
                                 <img src="assets/images/Frame4.png" alt="" srcset="">
-                                <p>Pre-tour Meetup With  Travel Spirit</p>
+                                
+                                <div class="div">
+                                    <p class="facility-title">Pre-tour Meetup With  Travel Spirit</p>
+                                    <p class="facility-details">Meet your travel mates who share the same goals and passion for travel as you ahead of the tour.</p>
+                                </div>
                             </div>
-                            <p class="facility-details">Meet your travel mates who share the same goals and passion for travel as you ahead of the tour.</p>
                         </div>
                         <div class="wrap mt-4">
-                            <div class="facility-title d-flex mb-2">
+                            <div class="d-flex">
                                 <img src="assets/images/Frame5.png" alt="" srcset="">
-                                <p>Secured Female Friendly Travel</p>
+                                
+                                <div class="div">
+                                    <p class="facility-title">Secured Female Friendly Travel</p>
+                                    <p class="facility-details">Enjoy your trip hassle and stress free without having to worry about security.</p>
+                                </div>
                             </div>
-                            <p class="facility-details">Enjoy your trip hassle and stress free without having to worry about security.</p>
                         </div>
                     </div>
 
                     <div class="col-xl-6 col-lg-12 col-md-12 col-12">
                         <div class="img">
-                            <img src="assets/images/image19.jpg" alt="" class="w-100 h-100">
+                            <!-- <img src="assets/images/maldives-island.jpg" alt="" class="w-100 h-100"> -->
                         </div>
                     </div>
                 </div>

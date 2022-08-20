@@ -8,6 +8,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --pink: #D83941;
+    --text-gray: #7A7A7A
+}
 @font-face {
     font-family: 'Roasting';
     src: url('../fonts/roasting/Roasting.ttf');
@@ -114,6 +118,17 @@ header .responsive-nav.show-nav{
     position: relative;
     
 }
+.carousel-fade img{
+    animation: zoomEffect 4s;
+}
+@keyframes zoomEffect {
+    from {
+        transform: scale(1.06, 1.06);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
 .carousel-fade .carousel-item {
     max-height: 100vh;
     opacity: 0;
@@ -148,6 +163,35 @@ header .responsive-nav.show-nav{
     width: 100%;
     background: transparent;
 }
+
+.top-navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.top-navbar .dropdown-content {
+    width: auto;
+    display: block;
+    top: auto;
+    left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    min-width: 10em;
+    max-width: 1000px;
+    background: var(--pink);
+}
+
+.top-navbar .dropdown-content a {
+    color: #fff;
+    padding: 13px 20px;
+    text-decoration: none;
+    transition: .4s;
+    display: block;
+    margin-right: 0;
+}
+
+.top-navbar .dropdown-content a:hover {background-color: #ddd;}
+.top-navbar .dropdown:hover .dropdown-content {display: block;}
 header .navigation{
     list-style: none;
     display: flex;
@@ -166,12 +210,12 @@ header .navigation li{
     width: 100px;
 }
 .logo{
-    width: 158px;
+    width: 115px;
     object-fit: contain;
     transition: .5s ease;
 }
 .top-navbar a{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 48px;
     color: #000;
@@ -182,7 +226,7 @@ a.login-btn{
     color: #FFFFFF;
     width: 87px;
     height: 38.96px;
-    background: #D83941;
+    background: var(--pink);
     border-radius: 20px;
     margin-right: 0;
     padding: 8px 16px;
@@ -215,43 +259,42 @@ a.login-btn{
 }
 .banner-title .title-2{
     font-family: 'Raleway';
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 24px;
     margin-bottom: 2.5rem !important;
 }
 a.banner-btn{
     font-family: 'Raleway';
     font-weight: 600;
-    font-size: 26px;
-    line-height: 48px;
-    background: #D83941;
+    font-size: 16px;
+    line-height: 1;
+    background: var(--pink);
     border-radius: 30px;
     padding: 15px 32px;
 }
 .section{
     text-align: center;
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 p.section-title{
     font-family: 'Roasting';
     font-weight: 400;
-    font-size: 85px;
-    line-height: 133px;
+    font-size: 70px;
+    line-height: 1;
     text-transform: capitalize;
-    color: #D83941;
+    color: var(--pink);
 }
 p.section-details{
     font-family: 'Quicksand';
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 48px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: var(--text-gray);
 }
 .search-tour{
     background: #FFF4F5;
 }
 .search {
-    width: 90%;
+    width: 92%;
     text-align: left;
 }
 .search-box{
@@ -264,10 +307,9 @@ p.section-details{
 .search-txt{
     border: none;
     font-family: 'Quicksand';
-    font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 1;
     vertical-align: bottom;
     padding-left: 1rem;
 }
@@ -279,15 +321,14 @@ p.section-details{
 }
 .search-btn{
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 1;
     text-align: center;
     color: #F9EFF0;
-    background: #D83941;
+    background: var(--pink);
     border-radius: 47px;
-    padding: 15px 25px;
+    padding: 10px 25px;
 }
 
 
@@ -300,14 +341,14 @@ p.section-details{
 .mhn-slide .mhn-text{text-align:center;padding:0 10px}
 .mhn-slide .mhn-text h4{font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
 .mhn-slide .mhn-text p{max-height:4.5em;overflow:hidden}
-.mhn-slide .owl-stage-outer{z-index:1; margin-top: 1.5rem;}
+.mhn-slide .owl-stage-outer{z-index:1; margin-top: .5rem;}
 .mhn-slide .owl-nav svg{color:#AFAFAF}
 /* .mhn-slide .owl-nav .disabled{display:none} */
 .mhn-slide .owl-prev,
 .mhn-slide .owl-next{
 	top:110px;
-	width:57.65px;
-	height:57.65px;
+	width: 50px;
+    height: 50px;
 	padding:8px;
     display: flex;
     align-items: center;
@@ -336,9 +377,9 @@ p.section-details{
 }
 .news-slide p.news-headline{
     font-family: 'Quicksand';
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 31px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
     margin-top: 2rem;
     color: #000;
 }
@@ -352,22 +393,17 @@ section.news-slide {
     padding-top: 6rem;
 }
 .tour-place-slide{
-    padding-top: 10rem !important;
-}
-.banner-title .title-1,
-.section-title{
-    margin-bottom: -30px !important;
+    padding-top: 8rem !important;
 }
 
 .tour-place-slide .mhn-inner img{
-    height: 470.36px;
+    height: 400px;
 }
 .section-title-details{
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 52px;
+    font-size: 24px;
+    line-height: 1.8em;
+    font-weight: 500;
     color: #000;
 }
 
@@ -378,13 +414,13 @@ a.booking-btn {
     background: #FFFFFF;
     border-radius: 20px;
     position: absolute;
-    bottom: 65px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     padding: 17px 35px;
     font-family: 'Quicksand-bold';
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 1;
     text-transform: uppercase;
     border: 2px solid transparent;
     transition: all .3s ease;
@@ -401,15 +437,13 @@ p.location{
 }
 p.location span{
     font-family: 'Quicksand';
-    font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 1;
     color: #9D9D9D;
 }
-p.location img{
-    width: 14.61px !important;
-    height: 20.68px !important;
+p.location i{
+    color: inherit;
 }
 
 
@@ -421,38 +455,42 @@ p.location img{
 }
 .facility img{
     object-fit: contain;
+    margin-right: 1rem;
 }
 .facility-title{
     gap: 20px;
-    font-size: 30px;
-    line-height: 52px;
-    color: #D83941;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--pink);
 }
 .facility-details{
-    font-size: 22px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 10px;
 }
 .facility .img{
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+    background: url(../images/maldives-island.jpg);
+    background-size: cover;
 }
 .facility .img img{object-fit: cover;}
 
 
 p.count{
     font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 80px;
+    font-weight: 500;
+    font-size: 69px;
     text-align: center;
     color: #4E3291;
 }
 
 p.count-title{
-    font-family: 'Quicksand-bold';
+    font-family: 'Quicksand';
     font-weight: 600;
-    font-size: 24px;
-    line-height: 19px;
+    font-size: 19px;
     text-align: center;
     color: #000000;
 }
@@ -504,13 +542,11 @@ section.testimonial{
     margin-top: 2rem;
 }
 #testimonial #image-caption{
-    font-style: normal;
     font-size: 1rem;
     margin-top: 0.5rem;
 }
 @media(max-width:767px){
     #testimonial #image-caption{
-        font-style: normal;
         font-size: 0.6rem;
         margin-top: 0.5rem;
     }
@@ -573,12 +609,11 @@ p.partner-title-details{
 }
 
 .sqr-btn{
-    background: #D83941;
+    background: var(--pink);
     border-radius: 10px;   
     font-family: 'Quicksand';
     font-weight: 700;
-    font-size: 20px;
-    line-height: 48px;
+    font-size: 16px;
     text-transform: uppercase;
     color: #FFFFFF; 
     padding: 22px 25px;
@@ -660,7 +695,7 @@ footer ul li a:hover{
     height: 30vh;
     display: flex;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 115px;
     padding: 4rem;
     background: url(../images/image11.jpg) no-repeat;
     background-size: cover;
@@ -669,7 +704,6 @@ footer ul li a:hover{
 
 .about-banner .title {
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 900;
     font-size: 40px;
     line-height: 133px;
@@ -685,7 +719,7 @@ footer ul li a:hover{
 }
 .founders .title,
 .img-details .title{
-    color: #D83941;
+    color: var(--pink);
     margin-top: 1rem;
 }
 .founders .title,
@@ -700,7 +734,6 @@ footer ul li a:hover{
 }
 .founders .box1{
     padding-top: 4rem;
-    margin-bottom: 4rem;
 }
 .founders .box2 p.section-details {
     padding-bottom: 3rem;
@@ -709,7 +742,7 @@ a.read{
     font-family: 'Quicksand';
     font-weight: 600;
     font-size: 18px;
-    color: #D83941;
+    color: var(--pink);
     margin-top: 3rem;
 }
 .founder-box {
@@ -717,7 +750,7 @@ a.read{
 }
 .founders .overlay {
     background: #FFF4F5;
-    height: 1055px;
+    height: 820px;
     width: calc(100% - 16rem);
     position: absolute;
     top: 0;
@@ -733,12 +766,12 @@ a.read{
     padding-left: 2rem;
 }
 .founder-box p.section-title {
-    line-height: 65px;
-    margin-top: 3rem;
-    margin-bottom: 3rem !important;
+    /* line-height: 65px; */
+    margin-bottom: 2rem !important;
 }
 .meet-squad p.section-title,
-.meet-squad p.section-details{text-align: left;}
+.meet-squad p.section-title-details{text-align: left;}
+.meet-squad p.section-title-details{color: var(--text-gray);}
 .social-icons i {
     font-size: 25px;
     color: #9D9D9D;
@@ -904,7 +937,7 @@ a.read{
 }
 
 .timeline #progress-bar-container li.active:after {
-    background:#D83941;
+    background:var(--pink);
 }
 
 .timeline #progress-bar-container #line {
@@ -924,8 +957,8 @@ a.read{
     content:" ";
     width:3%;
     height:100%;
-    background: #D83941;	 
-    background: linear-gradient(to right, #D83941 0%,#D83941 100%); 
+    background: var(--pink);	 
+    background: linear-gradient(to right, var(--pink) 0%,var(--pink) 100%); 
     position:absolute;
     z-index:2;
     border-radius:50px;
@@ -954,18 +987,15 @@ a.read{
 
 .timeline #progress-content-section .section-content p {
     font-family: 'Quicksand';
-    font-weight: 600;
     margin-top: 1rem;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
     color: #555;
 }
 .timeline #progress-content-section .section-content p.title{
     font-family: 'Quicksand';
-    font-style: normal;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 22px;
+    line-height: 1;
     color: #000;
 }
 
@@ -1014,9 +1044,9 @@ a.read{
     }
 }
 @media (min-width: 1400px){
-    .container {
+    /* .container {
         max-width: 1340px;
-    }
+    } */
     footer .row div:last-child{
         text-align: right;
     }
@@ -1024,7 +1054,14 @@ a.read{
 
 @media (max-width: 1200px){
     .founders .overlay{
-        height: 1130px;
+        height: 706px;
+    }
+    .facility .img {
+        height: 20rem;
+        background-position: bottom;
+    }
+    .carousel-fade, .carousel-fade .carousel-inner, .carousel-fade img{
+        max-height: 64vh;
     }
 }
 @media (min-width: 992px){
@@ -1034,6 +1071,9 @@ a.read{
 }
 
 @media (max-width: 991.99px){
+    .section {
+        padding: 3rem 0;
+    }
     .contact-us .row .main-wrap{
         margin-bottom: 3rem;
     }
@@ -1092,11 +1132,6 @@ a.read{
         margin: auto;
         margin-top: 2rem;
     }
-
-    .search-btn{
-        font-size: 20px;
-        line-height: 10px;
-    }
     .mhn-slide .owl-nav{
         top: 24px
     }
@@ -1122,8 +1157,7 @@ a.read{
         font-size: 20px;
     }
     .news-slide .section-title-wrap{
-        width: 100%;
-        margin-left: -15px;
+        width: 93%;
     }
     p.count{
         font-size: 50px;
@@ -1158,6 +1192,10 @@ a.read{
     }
 }
 @media (max-width: 576px) { 
+    .mhn-slide .owl-prev, .mhn-slide .owl-next {
+        width: 40px;
+        height: 40px;
+    }
     .about-banner .title{
         font-size: 35px;
         line-height: 56px;
@@ -1187,10 +1225,6 @@ a.read{
         font-size: 17px;
         line-height: 12px;
         padding: 0;
-    }
-    .search-btn {
-        font-size: 14px;
-        line-height: 4px;
     }
     section:nth-child(6){
         padding-top: 10rem !important;
