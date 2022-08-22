@@ -685,18 +685,18 @@ footer ul li a:hover{
 .about-us .top-navbar{
     background: #fff;
 }
-.about-banner {
+.banner100 {
     height: 30vh;
     display: flex;
     align-items: center;
-    margin-top: 115px;
+    margin-top: 6rem;
     padding: 4rem;
     background: url(../images/image11.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
 }
 
-.about-banner .title {
+.banner100 .title {
     font-family: 'Montserrat';
     font-weight: 900;
     font-size: 40px;
@@ -719,7 +719,9 @@ footer ul li a:hover{
 .founders .title,
 .founders .subtitle,
 .img-details .title,
-.img-details .subtitle
+.img-details .subtitle,
+.blog-testimonial .title,
+.blog-testimonial .subtitle
 {
     font-family: 'Quicksand';
     font-weight: 500;
@@ -1004,6 +1006,105 @@ a.read{
     content: "\ea5b";
 }
 
+#gallery_carousel img{
+    height: 27rem;
+    object-fit: cover;
+}
+.gallery{
+    margin: 3rem 0;
+}
+.infos .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-top: 3px solid var(--pink);
+    border-radius: 0;
+    /* background: #F9F9F9; */
+    color: var(--pink);
+}
+.infos{
+    margin-bottom: 3rem;
+}
+.infos .nav a{
+    text-transform: capitalize;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+}
+.infos .tab-pane{
+    padding: 1rem 0;
+    /* background: #F9F9F9; */
+    font-family: "Quicksand", Sans-serif;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #000;
+    text-align: justify;
+}
+.infos .tab-pane .maps iframe{
+    width: 100%;
+}
+
+.blog-testimonial {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+
+.blog-testimonial .carousel-item {
+    height: 215px;
+    padding: 0 50px;
+}
+.carousel-indicators li.active {
+    background-color: #000 !important;
+}
+.blog-testimonial .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+.blog-testimonial .carousel-indicators {
+    bottom: -50px;
+}
+.blog-testimonial .reviewer img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.blog-testimonial .title{color: var(--pink);}
+.blog-testimonial .title,
+.blog-testimonial .subtitle{
+    text-align: left;
+}
+.review p{
+    color: #FFFFFF;
+    font-family: "Quicksand", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--pink);
+    padding: 1rem;
+    border-radius: 20px;
+}
+.review:after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--pink);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% - 92px);
+    -webkit-transform: scaleX(.75) rotate(45deg);
+    -ms-transform: scaleX(.75) rotate(45deg);
+    transform: scaleX(.75) rotate(45deg);
+    border-width: 0;
+    box-sizing: content-box;
+}
+.blog-testimonial p.section-title {
+    font-size: 50px;
+    padding-bottom: 2rem;
+}
+
+
+
 
 
 @media (max-width: 1400px){
@@ -1073,7 +1174,7 @@ a.read{
     .founders .box1 {
         padding-top: 0;
     }
-    .about-banner{
+    .banner100{
         margin-top: 65px;
     }
     .founder-box{text-align: center;}
@@ -1188,7 +1289,7 @@ a.read{
         width: 40px;
         height: 40px;
     }
-    .about-banner .title{
+    .banner100 .title{
         font-size: 35px;
         line-height: 56px;
     }

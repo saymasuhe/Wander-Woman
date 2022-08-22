@@ -2,6 +2,10 @@ $('.carousel').carousel({
     interval: 4000
 });
 
+$('#gallery_carousel').carousel({
+    interval: 1000
+});
+
 window.addEventListener('scroll', function(){
     const hr = document.querySelector('.top-navbar');
     const headerResponsive = document.querySelector('.header-responsive');
