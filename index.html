@@ -9,13 +9,81 @@
     <title>Home</title>
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <!-- fontawesome 5-->
+    <script src="https://kit.fontawesome.com/8803f9618d.js" crossorigin="anonymous"></script>
+
+    <style>
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+            width: auto;
+            display: block;
+            top: auto;
+            left: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            min-width: 10em;
+            max-width: 1000px;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 13px 20px;
+            text-decoration: none;
+            transition: .4s;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown:hover .dropdown-content {display: block;}
+
+    </style>
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="header-responsive">
+                    <a href="index.html">
+                        <img class="logo" src="assets/images/logo1.png" alt="" srcset="">
+                    </a>
+
+                    <div class="nav">
+                        <div class="bar-icon">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="assets/images/logo1.png" alt=""> -->
+        <div class="responsive-nav">
+            <ul class="mb-0">
+                <li><a class="" href="index.html">Discover</a></li>
+                <li><a class="" href="about.html">About Us</a></li>
+                <li><a class="" href="#">Blog</a></li>
+            </ul>
+        </div>
+    </header>
     <div class="page-content">
-        <div class="banner">
+        <section class="banner">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -31,39 +99,571 @@
             </div>
             <div class="top-navbar">
                 <div class="container">
-                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 w-100">
+                    <header class="d-flex align-items-center justify-content-between p-2 px-md-4 w-100">
                         <img src="assets/images/logo1.png" alt="" class="logo">
-                        <nav class="my-2 my-md-0 mr-md-3">
-                          <a class="p-2" href="#">Discover</a>
-                          <a class="p-2" href="#">About Us</a>
-                          <a class="p-2" href="#">Sign Up</a>
-                          <a class="login-btn" href="#">Login</a>
-                        </nav>
-                    </div>
+                        <ul class="navigation mb-0">
+                            <li><a class="" href="index.html">Discover</a></li>
+                            <!-- <li>
+                                <div class="dropdown">
+                                    <a href="index.html" class="dropbtn">Dropdown</a>
+                                    <div class="dropdown-content">
+                                      <a href="#">Link 1</a>
+                                      <a href="#">Link 2</a>
+                                      <a href="#">Link 3</a>
+                                    </div>
+                                </div>
+                            </li> -->
+                            <li><a class="" href="about.html">About Us</a></li>
+                            <li><a class="p-2" href="blog.html">Blog</a></li>
+                            <!-- <li><a class="login-btn mbtn" href="#">Login</a></li> -->
+                        </ul>
+                    </header>
                 </div>
             </div>
             <div class="banner-title">
                 <p class="title-1">Wander Woman</p>
                 <p class="title-2">The most exciting community of women, <br> who love to explore.</p>
-                <a href="#" class="btn">Join The Community</a>
+                <a href="#" class="banner-btn mbtn">Join The Community</a>
             </div>
-        </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p class="section-title">Unleash Your Inner Travelling Desire</p>
+                <p class="section-details">Time to be bold and explore the unknown with like minded-female travelers. Feel secured and be a part of a community that loves to fly, celebrates the sense of freedom and womanhood. What are you waiting for then? Start now with the most exciting tour planning and consultation from the Wander Squad.</p>
+            </div>
+        </section>
+
+        <section class="section search-tour">
+            <div class="container">
+                <p class="section-title">guided tours</p>
+                <p class="section-details mb-3">Looking for a fun and unique way to explore a new destination? We offer nice group tours led by Trained Team Leaders & planned by travel experts, so you can relax and enjoy your trip. Our tours are designed for women who want to see the world and meet new friends.</p>
+                <p class="section-details mb-3">We offer a variety of tour options, from city breaks to beach vacations to adventurous treks. Whether you're looking to explore a new culture or just escape the hustle and bustle of everyday life, Wander Women has a tour for you.</p>
+                <p class="section-details">So what are you waiting for? Book your spot on a Wander Women tour today!</p>
+
+                <div class="search-box align-items-center mt-4">
+                    <div class="search d-flex">
+                        <img src="assets/images/Vector.png" alt="" class="search-img ml-3">
+                        <input  class="search-txt w-100" type="text" name="search" placeholder="Where are you going">
+                    </div>
+                    <a class="search-btn mbtn" href="#">Search</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- See What The Hype Is About -->
+        <section class="news-slide">
+            <div class="container">
+                <div class="mhn-slide owl-carousel">
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <img src="assets/images/news1.jpg" alt="" srcset="">
+                            <p class="news-headline">Achievements/News headlines will be placed here.</p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <img src="assets/images/news2.jpg" alt="" srcset="">
+                            <p class="news-headline">Achievements/News headlines will be placed here.</p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <img src="assets/images/news3.jpg" alt="" srcset="">
+                            <p class="news-headline">Achievements/News headlines will be placed here.</p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <img src="assets/images/news4.jpg" alt="" srcset="">
+                            <p class="news-headline">Achievements/News headlines will be placed here.</p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <img src="assets/images/news5.jpg" alt="" srcset="">
+                            <p class="news-headline">Achievements/News headlines will be placed here.</p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <img src="assets/images/news6.jpg" alt="" srcset="">
+                            <p class="news-headline">Achievements/News headlines will be placed here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title-wrap">
+                    <p class="section-title">See What The Hype Is About</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- discover new places -->
+        <section class="news-slide tour-place-slide">
+            <div class="container">
+                <div class="mhn-slide owl-carousel">
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place1.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Cox's Bazar Sea Beach</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place2.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Mount Bromo</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place3.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Pokhara City </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place1.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Cox's Bazar Sea Beach</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place2.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Mount Bromo</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place3.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Pokhara City </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title-wrap">
+                    <p class="section-title">discover new places</p>
+                    <p class="section-title-details">I haven’t been everywhere, but it’s on my list.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Work hard, staycation harder -->
+        <section class="news-slide tour-place-slide">
+            <div class="container">
+                <div class="mhn-slide owl-carousel">
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place1.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Cox's Bazar Sea Beach</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place2.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Mount Bromo</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place3.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Pokhara City </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place1.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Cox's Bazar Sea Beach</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place2.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Mount Bromo</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place3.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Pokhara City </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title-wrap">
+                    <p class="section-title">Work hard, staycation harder</p>
+                    <p class="section-title-details">Escape from the daily hustles sand bustles of life and enjoy weekends with us.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Overseas Escapade -->
+        <section class="news-slide tour-place-slide pb-5 mb-5">
+            <div class="container pt-3">
+                <div class="mhn-slide owl-carousel">
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place1.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Cox's Bazar Sea Beach</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place2.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Mount Bromo</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place3.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Pokhara City </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place1.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Cox's Bazar Sea Beach</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Chittagong, Bangladesh</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place2.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Mount Bromo</p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>East Java, Indonesia</span> </p>
+                        </div>
+                    </div>
+                    <div class="mhn-item">
+                        <div class="mhn-inner">
+                            <div class="img">
+                                <img src="assets/images/place3.jpg" alt="" srcset="">
+                                <a href="#" class="booking-btn">Book Now</a>
+                            </div>
+                            <p class="news-headline">Pokhara City </p>
+                            <p class="location"><span><i class="fas fa-map-marker-alt mr-1"></i>Pokhara, Nepal</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title-wrap">
+                    <p class="section-title">Overseas Escapade</p>
+                    <p class="section-title-details">Take only memories and leave footprints across the globe with our <br> international tour packages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section facility">
+            <div class="container">
+                <p class="section-title">How we make a difference</p>
+                <p class="section-title-details">The world is waiting for your first step towards unforgettable adventures!</p>
+
+                <div class="row mt-5 pb-4">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-12">
+                        <div class="wrap">
+                            <div class="d-flex mb-5">
+                                <img src="assets/images/Frame.png" alt="" srcset="">
+                                <div class="div">
+                                    <p class="facility-title">Expert Trip Guides</p>
+                                    <p class="facility-details">Our dedicated tour coordinators will guide <br> you throughout your trip.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mt-4">
+                            <div class="d-flex mb-5">
+                                <img src="assets/images/Frame2.png" alt="" srcset="">
+                                
+                                <div class="div">
+                                    <p class="facility-title">Community Support</p>
+                                    <p class="facility-details">Get support from a community of more than 33,000 female travelers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mt-4">
+                            <div class="d-flex mb-5">
+                                <img src="assets/images/Frame3.png" alt="" srcset="">
+                                
+                                <div class="div">
+                                    <p class="facility-title">Flexible Payment Policy</p>
+                                    <p class="facility-details">With our Buy now, pay later and  emi facilities available, you can relax and vacate in peace without worrying about payments. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mt-4">
+                            <div class="d-flex mb-5">
+                                <img src="assets/images/Frame4.png" alt="" srcset="">
+                                
+                                <div class="div">
+                                    <p class="facility-title">Pre-tour Meetup With  Travel Spirit</p>
+                                    <p class="facility-details">Meet your travel mates who share the same goals and passion for travel as you ahead of the tour.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mt-4">
+                            <div class="d-flex">
+                                <img src="assets/images/Frame5.png" alt="" srcset="">
+                                
+                                <div class="div">
+                                    <p class="facility-title">Secured Female Friendly Travel</p>
+                                    <p class="facility-details">Enjoy your trip hassle and stress free without having to worry about security.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-12">
+                        <div class="img">
+                            <!-- <img src="assets/images/maldives-island.jpg" alt="" class="w-100 h-100"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section counter-section">
+            <p class="section-title text-center">Together we grow</p>
+            <div class="container">
+                <div class="row mt-4 pb-5">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <p class="count"><span class="counter">8000</span>+</p>
+                        <p class="count-title pr-3">Travelers</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <p class="count"><span class="counter">350</span>+</p>
+                        <p class="count-title pr-3">Trips</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <p class="count"><span class="counter">33000</span>+</p>
+                        <p class="count-title pr-3">Members</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <p class="count"><span class="counter">50</span>+</p>
+                        <p class="count-title pr-3">Destinations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" section testimonial pb-5">
+            <div class="container">
+                <p class="section-title text-center">Not Convinced?</p>
+                <p class="section-title-details text-center">Hear them out</p>
+                
+                <div id="testimonial" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code,
+                            I don't know what will.This was the very best explanation of frameworks for brginners 
+                            that I've ever seen.
+                        </p>
+                        <img src="assets/images/news1.jpg">
+                        <div id="image-caption">Nick Doe</div>
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code,
+                            I don't know what will.This was the very best explanation of frameworks for brginners 
+                            that I've ever seen.</p>
+                            <img src="assets/images/news3.jpg" class="img-fluid">
+                            <div id="image-caption">Cromption Greves</div>
+                        </div>   
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code,
+                            I don't know what will.This was the very best explanation of frameworks for brginners 
+                            that I've ever seen.</p>
+                            <img src="assets/images/news6.jpg" class="img-fluid">
+                            <div id="image-caption">Harry Mon</div>
+                        </div>   
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
+                        <img src="assets/images/prev.png" alt="" srcset="">
+                    </a>
+                    <a class="carousel-control-next" href="#testimonial" data-slide="next">
+                        <img src="assets/images/next.png" alt="" srcset="">
+                    </a>
+                </div>   
+            </div>
+
+        </section>
+
+        <section class="section partners">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-sm-12">
+                        <p class="section-title">Teamed up with the best trip partners</p>
+                        <p class="partner-title-details mb-5">We have teamed up with the best trip partners for your adventures. From transportation and food to accommodation, we have the best places. So, enjoy your journey stress-free.</p>
+
+                        <a class="sqr-btn" href="#">meet our partners</a>
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/Airbnb_Logo_Bélo.png" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shop pt-0">
+            <div class="gradient"></div>
+            <div class="container wrap1">
+                <div class="row mb-5" style="border-radius: 10px; overflow: hidden;">
+                    <div class="col-lg-4 contact p-5">
+                        <p class="partner-title-details mb-5 ">Unsure of how to plan your next trip, what to pick? Just book an appointment with one of our travel experts</p>
+                        <a class="sqr-btn" href="#">let's talk</a>
+                    </div>
+                    <div class="col-lg-8 p-0">
+                        <img class="w-100 h-100" src="assets/images/image24.jpg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="container wrap2">
+                <p class="section-title">wander shop</p>
+                <p class="section-title-details text-center mb-5">Enhance your travel experience <br> Grab the best deals on travel merchandise from Wander Shop! </p>
+                <a class="sqr-btn pr-5 pl-5" href="#">shop now</a>
+            </div>
+        </section>
+
+        <footer class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 d-flex align-items-start justify-content-start">
+                        <img src="assets/images/logo1.png" alt="">
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <p>Contact Information <br>
+                        Address: Moar, Dhanmondi 27, Dhaka - 1209, Bangladesh <br>
+                        Email: contact@hellowanderwoman.com <br>
+                        Contact Number: 0000-000000 <br>
+                        www.hellowanderwoman.com</p>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 col-md-6 col-sm-6">
+                        <ul>
+                            <li><a href="#">Press/Media Kit</a></li>
+                            <li><a href="#">Become a Partner</a></li>
+                            <li><a href="#">Become a Trip Consultant</a></li>
+                            <li><a href="#">Become a Trip Leader </a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 d-flex flex-column justify-content-between">
+                        <div class="social-icons">
+                            <a href=""><img src="assets/images/Frame6.png" alt=""></a>
+                            <a href=""><img src="assets/images/Frame7.png" alt=""></a>
+                            <a href=""><img src="assets/images/Frame8.png" alt=""></a>
+                            <a href=""><img src="assets/images/Frame9.png" alt=""></a>
+                        </div>
+                        <p>Design & Development by XYZ <br>
+                        All right reserved © Wander Woman 2022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
     </div>
 
 
 
 
 
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <script>
-        $('.carousel').carousel({
-            interval: 4000
-        })
+        // Menu bar
+        $('.bar-icon').click(function(){
+            $('.responsive-nav').toggleClass('show-nav');
+            $('.header').toggleClass('show')
+            // $('.page-content').toggle();
+        });
     </script>
+
 </body>
 </html>

@@ -1,49 +1,272 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+  <style>
+    header{
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    header .nav{
+        /* display: none;
+        float: right; */
+    }
+    header .nav .bar-icon {
+        color: #000;
+        border: 1px solid black;
+        font-size: 22px;
+        padding: 0 6px;
+    }
+    header .header-top{
+        background-color: #f5f5f5;
+        padding: 2px 0;
+        font-size: 13px;
+        transition: all .3s ease;
+        visibility: visible;
+    }
+    header.hide-header .header-top{
+        transform: translate3d(0, -100%, 0);
+    }
+    header.hide-header .header-bottom{
+        transform: translate3d(0, -42%, 0);
+    }
+    header.hide-header .header-bottom img.logo{
+        max-height: 38px;
+    }
+    header ul{
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    .header-top ul li a{
+        color: #000;
+        padding: 0 15px;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    .header-top .social-links ul{
+        justify-content: flex-end;
+        font-size: 20px;
+    }
+    .header-top ul.contact li a{
+        font-weight: 600;
+        padding-top: 2px;
+    }
+    .header-top ul.contact li{
+        padding-top: 2px;
+    }
     
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="assets/images/bg1.jpg" alt="First slide">
+    .header-top ul li a:hover{
+        color: var(--paste);
+    }
+    .header-top ul.contact li a i{
+        font-size: 18px;
+        padding-right: 14px;
+    }
+    
+    .header-top .social-links ul li:last-child a{
+        padding-right: 0;
+    }
+    .header-top ul.contact li:first-child a{
+        padding-left: 0;
+    }
+    
+    /* ----- Header-Bottom ---- */
+    .header-bottom{
+        background-color: white;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 9%);
+        transition: all .3s ease;
+        padding: 10px 0;
+    }
+    .header-bottom img.logo{
+        max-height: 43px;
+        transition: all .3s ease;
+    }
+    .header-bottom .navigation-left {
+        border-right: 1px dotted var(--secondary-light);
+    }
+    .header-bottom .navigation-left ul{
+        justify-content: flex-end;
+    }
+    .header-bottom .navigation-left ul a {
+        font-weight: 500;
+        font-size: 13px;
+        color: #000;
+        padding: 7px 10px;
+        margin: 0 5px;
+        border-radius: 50px;
+        transition: all .5s ease !important;
+    }
+    .header-bottom .navigation-left ul a:hover,.header-bottom .navigation-left button:hover {
+        /* color: #fff; */
+        background-color: var(--paste-transparent);
+    }
+    .header-bottom button{
+        border: 1px solid var(--paste);
+        background-color: transparent;
+        margin-left: 10px;
+    }
+    
+    .header-bottom .navigation-right ul{
+        justify-content: space-between;
+    }
+    .header-bottom .navigation-right ul a{
+        color: var(--secondary-light);
+        font-size: 14px;
+        text-align: center;
+        /* margin-right: 10px; */
+    }
+    .header-bottom .navigation-right ul a i{
+        display: block;
+        font-size: 22px;
+        color: #777;
+    }
+    .header-bottom .navigation-right ul a span{
+        display: block;
+    }
+    
+    .header-bottom .navigation-right ul a:hover{
+        color: #000;
+    }
+    
+    .header-bottom .navigation-right ul li:last-child a{
+        margin-right: 0;
+    }
+    .header-bottom .navigation-right ul a:hover i{
+        color: #333;
+    }
+    .header-bottom .navigation-right ul a:hover span{
+        color: var(--paste-dark);
+    }
+    
+    header .responsive-nav{
+        background: var(--paste-dark);
+        min-height: 100vh;
+        position: fixed;
+        padding: 0 35px;
+        width: 100vw;
+        /* display: none; */
+        transform: translate3d(100vw,0,0);
+        transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+    header .responsive-nav.show-nav{
+        /* display: block; */
+        transform: translateZ(0);
+    }
+    header .responsive-nav ul {
+        padding: 15px 0;
+        display: none;
+        text-align: center;
+        /* opacity: 0; */
+        transition: all .3s;
+        border-bottom: 1px solid var(--paste-light);
+    }
+    header .responsive-nav ul:last-child{
+        border-bottom: none;
+    }
+    header .responsive-nav.show-nav ul {
+        /* opacity: 1 !important; */
+        display: block;
+    }
+    header .responsive-nav ul a {
+        color: #fff;
+        font-size: 16px;
+        padding: 5px;
+        display: block;
+        letter-spacing: .5px;
+        font-family: 'Varela Round', sans-serif;
+    }
+    header .dropbtn {
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    
+    header .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    header .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 230px;
+        top: 28px;
+        padding-top: 15px;
+        box-shadow: 0px 13px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+    }
+    header .dropdown-content ul{
+        display: block;
+    }
+    header .dropdown-content li a{
+        display: block;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 10px 20px !important;
+    }
+    header .dropdown:hover .dropdown-content{
+        display: block !important;
+    }
+    @media (max-width: 991.98px)
+    {    header .header-responsive {
+        width: 100vw;
+        padding-right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }}
+    
+  @media (min-width: 992px) {
+      header .responsive-nav{
+          display: none;
+      }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-bottom">
+      <div class="my-container" style="max-width: 1680px;">
+          <div class="row align-items-center">
+              <div class="col-lg-3 col-md-6 col-sm-12 header-responsive">
+  
+                  <div class="nav">
+                      <div class="bar-icon">bar</div>
+                  </div>
+              </div>
           </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/images/bg2.jpg" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/images/photo_271162 2.jpg" alt="Third slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
+    </div>
+  </header>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <script>
-        $('.carousel').carousel({
-            interval: 2000
-        })
-    </script>
-  </body>
+  <script>
+    
+    $('.bar-icon').click(function(){
+        $('.responsive-nav').toggleClass('show-nav');
+    });
+  </script>
+</body>
 </html>
