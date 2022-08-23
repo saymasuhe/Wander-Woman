@@ -11,6 +11,8 @@
 }
 :root{
     --pink: #D83941;
+    --light-pink: #FFF4F5;
+    --light-blue: #BBE1FF;
     --text-gray: #7A7A7A
 }
 @font-face {
@@ -35,6 +37,7 @@ a, a:hover{
 ul{
     list-style: none;
 }
+.clear-both{clear: both;}
 header.header {
     position: fixed;
     top: 0;
@@ -281,7 +284,7 @@ p.section-details{
     color: var(--text-gray);
 }
 .search-tour{
-    background: #FFF4F5;
+    background: var(--light-pink);
 }
 .search {
     width: 92%;
@@ -566,7 +569,7 @@ section.testimonial{
 }
 
 .partners{
-    background: #FFF4F5;
+    background: var(--light-pink);
 }
 .partners p.section-title{
     line-height: 75px;
@@ -606,6 +609,7 @@ p.partner-title-details{
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
+    text-align: center;
     color: #FFFFFF; 
     padding: 16px 25px;
     transition: all .3s ease;
@@ -746,7 +750,7 @@ a.read{
     z-index: 1;
 }
 .founders .overlay {
-    background: #FFF4F5;
+    background: var(--light-pink);
     height: 820px;
     width: calc(100% - 16rem);
     position: absolute;
@@ -811,6 +815,7 @@ a.read{
     margin-top: 2rem;
     border-bottom: 3px solid #00000069;
 }
+.contact-us .row .main-wrap{background: var(--light-blue); border-radius: 10px;}
 .contact-us .wrap{
     height: 532px;
     display: flex;
@@ -948,8 +953,8 @@ a.read{
 .timeline #progress-content-section {
     width:90%;
     margin: auto;
-    /* border: 1px solid #FFF4F5; */
-    background: #FFF4F5;
+    /* border: 1px solid var(--light-pink); */
+    background: var(--light-pink);
     border-radius: 10px;
 }
 
@@ -1049,7 +1054,6 @@ a.read{
 }
 
 .blog-testimonial .carousel-item {
-    height: 215px;
     padding: 0 50px;
 }
 .carousel-indicators li.active {
@@ -1074,6 +1078,10 @@ a.read{
 .blog-testimonial .title,
 .blog-testimonial .subtitle{
     text-align: left;
+}
+#gallery_carousel {
+    padding: 6px;
+    box-shadow: 0px 3px 7px #00000047;
 }
 .review p{
     color: #FFFFFF;
@@ -1103,6 +1111,54 @@ a.read{
     font-size: 50px;
     padding-bottom: 2rem;
 }
+
+p.status {
+    font-family: 'Quicksand-bold';
+    /* background: #9aec95; */
+    background: #42d665;
+    color: #fff;
+    font-size: 14px;
+    /* display: inline-block; */
+    padding: 4px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    float: right;
+}
+p.price{
+    font-family: 'Quicksand';
+    font-weight: 600;
+    background: var(--light-blue);
+    padding: 16px 0;
+    font-size: 18px;
+    text-align: center;
+    margin: 1rem 0;
+}
+.tpd-wrapper {
+    border: 2px solid #7a7a7a33;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+.tour-info .title{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border-bottom: 1px solid var(--text-gray);
+    padding-bottom: 10px;
+}
+.tour-info .title span{
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--pink);
+}
+.tpd-wrapper ul{margin-top: 1rem;}
+.tpd-wrapper ul img{margin-right: .5rem;}
+.tpd-wrapper .guide-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.rank img{max-height: 16px; object-fit: contain;}
+.sqr-book .sqr-btn{padding: 16px 10px;}
 
 
 
@@ -1289,6 +1345,11 @@ a.read{
     }
     section.news-slide{padding-top: 4rem;}
     footer{padding: 1rem;}
+    .infos .nav a{font-size: 12px;}
+    .infos .tab-pane{font-size: 16px; line-height: 1.5em;}
+    
+    
+
 }
 @media (max-width: 576px) { 
     .mhn-slide .owl-prev, .mhn-slide .owl-next {

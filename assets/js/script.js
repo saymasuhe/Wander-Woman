@@ -6,6 +6,11 @@ $('#gallery_carousel').carousel({
     interval: 1000
 });
 
+// $('#testimonial_slider').carousel({
+//     dots: true,
+//     interval: 200
+// });
+
 window.addEventListener('scroll', function(){
     const hr = document.querySelector('.top-navbar');
     const headerResponsive = document.querySelector('.header-responsive');
