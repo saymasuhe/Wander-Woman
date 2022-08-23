@@ -80,7 +80,6 @@ header .nav .bar-icon {
     line-height: 1.8em;
     color: #fff;
     font-family: 'Raleway', sans-serif;
-    margin-right: 16px;
 }
 .responsive-nav li a{
     padding: 10px 35px;
@@ -155,6 +154,7 @@ header .responsive-nav.show-nav{
     left: 0;
     width: 100%;
     background: transparent;
+    z-index: 1;
 }
 
 .top-navbar .dropdown {
@@ -163,7 +163,12 @@ header .responsive-nav.show-nav{
 }
 
 .top-navbar .dropdown-content {
-    width: auto;
+    display: none;
+    position: absolute;
+    min-width: 10em;
+    background: var(--pink);
+    transition: .4s;
+    /* width: auto;
     display: block;
     top: auto;
     left: 0px;
@@ -171,19 +176,21 @@ header .responsive-nav.show-nav{
     margin-top: 0px;
     min-width: 10em;
     max-width: 1000px;
-    background: var(--pink);
+    background: var(--pink); */
 }
 
 .top-navbar .dropdown-content a {
+    font-family: "Quicksand", Sans-serif;
+    font-weight: 400;
     color: #fff;
-    padding: 13px 20px;
-    text-decoration: none;
+    padding-left: 1rem;
     transition: .4s;
     display: block;
     margin-right: 0;
+    font-size: 13px;
 }
 
-.top-navbar .dropdown-content a:hover {background-color: #ddd;}
+.top-navbar .dropdown-content a:hover {background: #EFCED14D;}
 .top-navbar .dropdown:hover .dropdown-content {display: block;}
 header .navigation{
     list-style: none;
@@ -245,18 +252,18 @@ a.login-btn{
     top: 30%;
 }
 .banner-title .title-1{
-    font-family: 'Roasting';
+    font-family: 'Roasting', Sans-serif;
     text-transform: capitalize;
     font-weight: 400;
     font-size: 143.508px;
 }
 .banner-title .title-2{
-    font-family: 'Raleway';
+    font-family: 'Raleway', Sans-serif;
     font-size: 24px;
     margin-bottom: 2.5rem !important;
 }
 a.banner-btn{
-    font-family: 'Raleway';
+    font-family: 'Raleway', Sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1;
@@ -269,7 +276,7 @@ a.banner-btn{
     padding: 4rem 0;
 }
 p.section-title{
-    font-family: 'Roasting';
+    font-family: 'Roasting', Sans-serif;
     font-weight: 400;
     font-size: 70px;
     line-height: 1;
@@ -277,7 +284,7 @@ p.section-title{
     color: var(--pink);
 }
 p.section-details{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.8em;
@@ -299,7 +306,7 @@ p.section-details{
 }
 .search-txt{
     border: none;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 1;
@@ -313,7 +320,7 @@ p.section-details{
     outline: none;
 }
 .search-btn{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 1;
@@ -370,7 +377,7 @@ p.section-details{
     object-fit: cover;
 }
 .news-slide p.news-headline{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -394,7 +401,7 @@ section.news-slide {
     height: 400px;
 }
 .section-title-details{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Sans-serif;
     font-size: 24px;
     line-height: 1.8em;
     font-weight: 500;
@@ -412,7 +419,7 @@ a.booking-btn {
     left: 50%;
     transform: translateX(-50%);
     padding: 17px 35px;
-    font-family: 'Quicksand-bold';
+    font-family: 'Quicksand-bold', Sans-serif;
     font-size: 15px;
     line-height: 1;
     text-transform: uppercase;
@@ -430,7 +437,7 @@ p.location{
     padding-top: 5px;
 }
 p.location span{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1;
@@ -444,7 +451,7 @@ p.location i{
 .facility{
     background: #EFF9FF;
     text-align: left;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
 }
 .facility img{
@@ -474,7 +481,7 @@ p.location i{
 
 
 p.count{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Sans-serif;
     font-weight: 500;
     font-size: 69px;
     text-align: center;
@@ -482,7 +489,7 @@ p.count{
 }
 
 p.count-title{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     font-size: 19px;
     text-align: center;
@@ -577,7 +584,7 @@ section.testimonial{
     max-width: 600px;
 }
 p.partner-title-details{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 45px;
@@ -605,7 +612,7 @@ p.partner-title-details{
 .sqr-btn{
     background: var(--pink);
     border-radius: 10px;   
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
@@ -665,7 +672,7 @@ footer{
     padding: 3rem;
 }
 footer p, footer a{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
@@ -702,7 +709,7 @@ footer ul li a:hover{
 }
 
 .banner100 .title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Sans-serif;
     font-weight: 900;
     font-size: 40px;
     line-height: 133px;
@@ -728,7 +735,7 @@ footer ul li a:hover{
 .blog-testimonial .title,
 .blog-testimonial .subtitle
 {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
@@ -740,7 +747,7 @@ footer ul li a:hover{
     padding-bottom: 3rem;
 }
 a.read{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     font-size: 18px;
     color: var(--pink);
@@ -830,7 +837,7 @@ a.read{
     background: #FFFFFF;
     border: 1px solid #C8C8C8;
     border-radius: 10px;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -843,7 +850,7 @@ a.read{
 }
 .founder-box .section-title-responsive{display: none; }
 .contact-us p.details{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 29px;
@@ -971,13 +978,13 @@ a.read{
 }
 
 .timeline #progress-content-section .section-content p {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     margin-top: 1rem;
     font-size: 18px;
     color: #555;
 }
 .timeline #progress-content-section .section-content p.title{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 1;
@@ -1030,7 +1037,7 @@ a.read{
 }
 .infos .nav a{
     text-transform: capitalize;
-    font-family: 'Raleway';
+    font-family: 'Raleway', Sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1;
@@ -1094,7 +1101,7 @@ a.read{
 }
 .review:after {
     content: "";
-    display: block;
+    display: none;
     width: 14px;
     height: 14px;
     background-color: var(--pink);
@@ -1113,7 +1120,7 @@ a.read{
 }
 
 p.status {
-    font-family: 'Quicksand-bold';
+    font-family: 'Quicksand-bold', Sans-serif;
     /* background: #9aec95; */
     background: #42d665;
     color: #fff;
@@ -1126,7 +1133,7 @@ p.status {
     float: right;
 }
 p.price{
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     background: var(--light-blue);
     padding: 16px 0;
@@ -1140,7 +1147,7 @@ p.price{
     margin-top: 3rem;
 }
 .tour-info .title{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Sans-serif;
     font-weight: 600;
     border-bottom: 1px solid var(--text-gray);
     padding-bottom: 10px;
