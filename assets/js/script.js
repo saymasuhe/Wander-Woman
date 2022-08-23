@@ -1,5 +1,5 @@
 $('.carousel').carousel({
-    interval: 4000
+    interval: 500
 });
 
 $('#gallery_carousel').carousel({
@@ -20,10 +20,15 @@ $(function(){
         slideBy:1,
         rewind:false,
         responsive:{
-            0:{items:1},
-            768:{items:2},
-            992:{items:2},
-            1200:{item:3}
+            0:{
+                items:1,
+            },
+            576:{
+                items:2,
+            },
+            1200:{
+                items:3,
+            }
         },
         smartSpeed:200,
         navText:['<img src="assets/images/prev.png" alt="" srcset="">','<img src="assets/images/next.png" alt="" srcset="">']
