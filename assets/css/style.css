@@ -1099,19 +1099,20 @@ a.read{
     padding: 1rem;
     border-radius: 20px;
 }
+.review{position: relative;}
 .review:after {
     content: "";
-    display: none;
+    display: block;
     width: 14px;
     height: 14px;
     background-color: var(--pink);
     position: absolute;
+    top: -6px;
     left: 50%;
-    bottom: calc(100% - 92px);
+    transform: translateX(-50%);
     -webkit-transform: scaleX(.75) rotate(45deg);
     -ms-transform: scaleX(.75) rotate(45deg);
     transform: scaleX(.75) rotate(45deg);
-    border-width: 0;
     box-sizing: content-box;
 }
 .blog-testimonial p.section-title {

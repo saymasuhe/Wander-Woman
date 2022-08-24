@@ -46,6 +46,7 @@
                 <li><a class="" href="index.html">Discover</a></li>
                 <li><a class="" href="about.html">About Us</a></li>
                 <li><a class="" href="blog.html">Blog</a></li>
+                <li><a class="" href="listPage.html">Blog List</a></li>
             </ul>
         </div>
     </header>
@@ -71,6 +72,7 @@
                         </li>
                         <li><a class="" href="about.html">About Us</a></li>
                         <li><a class="p-2" href="blog.html">Blog</a></li>
+                        <li><a class="" href="listPage.html">Blog List</a></li>
                         <!-- <li><a class="login-btn mbtn" href="#">Login</a></li> -->
                     </ul>
                 </header>
@@ -153,7 +155,7 @@
                     <section class="blog-testimonial">
                         <p class="section-title text-center fs-12">what others say about this trip</p>
 
-                        <div id="testimonial_slider" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
                             <div id="slider" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -326,6 +328,11 @@
             $('.responsive-nav').toggleClass('show-nav');
             $('.header').toggleClass('show')
             // $('.page-content').toggle();
+        });
+
+        $('#testimonial_slider').carousel({
+            dots: true,
+            interval: 10000
         });
     </script>
     

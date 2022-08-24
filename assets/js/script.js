@@ -1,15 +1,11 @@
 $('.carousel').carousel({
-    interval: 500
+    delay: 1000,
+    interval: 3000
 });
 
 $('#gallery_carousel').carousel({
     interval: 1000
 });
-
-// $('#testimonial_slider').carousel({
-//     dots: true,
-//     interval: 200
-// });
 
 window.addEventListener('scroll', function(){
     const hr = document.querySelector('.top-navbar');
