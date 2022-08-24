@@ -27,6 +27,11 @@
     font-family: 'Quicksand-bold';
     src: url('../fonts/quicksand/quicksand.bold-regular.otf');
 }
+img.icon{
+    max-height: 18px;
+    margin-right: 5px;
+    margin-top: -5px;
+}
 p{
     margin-bottom: 0 !important;
 }
@@ -40,6 +45,7 @@ ul{
 input, select{
     width: 100%;
 }
+.pull-right{float: right}
 .clear-both{clear: both;}
 header.header {
     position: fixed;
@@ -78,22 +84,26 @@ header .nav .bar-icon {
     margin: 0px 26px;
     cursor: pointer;
 }
-.responsive-nav li a{
+.responsive-nav li a,
+.responsive-nav li p{
+    padding: 10px 35px;
+    display: block;
     font-size: 14px;
     line-height: 1.8em;
     color: #fff;
     font-family: 'Raleway', sans-serif;
+    cursor: pointer;
 }
-.responsive-nav li a{
-    padding: 10px 35px;
-    display: block;
-}
+.responsive-nav li p:hover,
 .responsive-nav li a:hover{
-    background: #EFCED14D;
+    background: #c74b51;
 }
-.responsive-nav a.login-btn{
-    padding: 8px 40px;
-    color: #fff;
+.responsive-nav .dropdown-content{
+    background: #d85c62;
+    display: none;
+}
+.responsive-nav.show-dropdown .dropdown-content{
+    display: block;
 }
 header .responsive-nav.show-nav{
     transform: translateZ(0);
@@ -287,6 +297,7 @@ p.section-title{
     color: var(--pink);
 }
 p.section-details{
+    width: 100%;
     font-family: 'Quicksand', Sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -473,10 +484,14 @@ p.location i{
 }
 .facility .img{
     height: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
-    background: url(../images/maldives-island.jpg);
-    background-size: cover;
+    /* background: url(../images/maldives-island.jpg);
+    background-size: cover; */
+}
+.facility .img iframe{
+    width: 100%;
+    height: 100%;
 }
 .facility .img img{object-fit: cover;}
 
@@ -581,7 +596,7 @@ section.testimonial{
 }
 .partners p.section-title{
     line-height: 75px;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
     max-width: 600px;
 }
 p.partner-title-details{
@@ -750,13 +765,14 @@ footer ul li a:hover{
 .founders .box2 p.section-details {
     padding-bottom: 3rem;
 }
-a.read{
+/* a.read{
     font-family: 'Quicksand', Sans-serif;
     font-weight: 600;
     font-size: 18px;
     color: var(--pink);
-    margin-top: 3rem;
-}
+    display: block;
+    text-align: left;
+} */
 .founder-box {
     z-index: 1;
 }
@@ -821,14 +837,14 @@ a.read{
     background: url(../images/maldives-island.jpg);
     padding-bottom: 20rem;
 }
-.contact-us p.section-title{line-height: 70px; text-align: left; }
+.contact-us p.section-title{text-align: left; }
 .contact-us p.section-details{
-    margin-top: 2rem;
-    border-bottom: 3px solid #00000069;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #00000069;
 }
 .contact-us .row .main-wrap{background: var(--light-blue); border-radius: 10px;}
 .contact-us .wrap{
-    height: 532px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1197,9 +1213,17 @@ button.sqr-btn:focus{outline: none;}
     outline: 3px solid var(--light-blue);
 }
 
-.package-card{font-family: 'Raleway', sans-serif;}
+.package-card{
+    font-family: 'Raleway', sans-serif;    
+    box-shadow: 0px 2px 6px #0000004a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
 .package-card img{
     width: 100%;
+    height: 310px;
+    object-fit: cover;
 } 
 .package-card .cTitle{
     font-size: 16px;
@@ -1210,10 +1234,28 @@ button.sqr-btn:focus{outline: none;}
 }
 
 .tours-wrap{min-height: 15vh;}
-.package-card .tCost span{
+.package-card .tCost{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    /* padding-bottom: 2rem; */
 }
-.package-card .sqr-btn{}
+.package-card .sqr-btn{
+    padding: 10px;
+    background-color: var(--light-blue);
+    color: #000;
+}
+.card-details {padding: 10px;}
 
+.page-item.active .page-link {
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+.page-link,
+.page-link:focus{
+    color: var(--pink);
+}
+.page-link:focus{outline: 3px solid var(--light-pink);}
 
 
 
@@ -1223,7 +1265,7 @@ button.sqr-btn:focus{outline: none;}
     
     .find-tours h6,
     button.sqr-btn{margin-top: 1rem;}
-    button.sqr-btn{padding: 15px 25px;}
+    /* button.sqr-btn{padding: 15px 25px;} */
     a.banner-btn{
         font-size: 14px;
     }
@@ -1246,11 +1288,18 @@ button.sqr-btn:focus{outline: none;}
 } */
 
 @media (max-width: 1200px){
+    
+    p.section-title{
+        font-size: 60px;
+    }
+    .facility .img {
+        margin-top: 3rem;
+    }
     .founders .overlay{
         height: 706px;
     }
     .facility .img {
-        height: 20rem;
+        height: 25rem;
         background-position: bottom;
     }
     .carousel-fade, .carousel-fade .carousel-inner, .carousel-fade img{
@@ -1268,6 +1317,26 @@ button.sqr-btn:focus{outline: none;}
 }
 
 @media (max-width: 991.99px){
+    .contact-us input, .contact-us textarea {
+        font-size: 16px;
+        line-height: 1.4em;
+        padding: 9px 15px;
+        margin-bottom: 2rem;
+    }
+    p.section-details, .section-title-details {
+        font-size: 16px;
+        line-height: 1.4em;
+        text-align: justify;
+    }
+    .founders .title, 
+    .founders .subtitle, 
+    .img-details .title, 
+    .img-details .subtitle, 
+    .blog-testimonial .title, 
+    .blog-testimonial .subtitle{
+        font-size: 14px;
+        line-height: 1.4em;
+    }
     .owl-carousel .owl-item .mhn-inner{width: 98%;}
     .mhn-slide .owl-stage-outer{margin-top: 1.5rem}
     .section {
@@ -1282,10 +1351,7 @@ button.sqr-btn:focus{outline: none;}
         width: 100%;
         margin-bottom: 1rem !important;
     }
-    .contact-us {
-        background-attachment: fixed;
-        background-size: cover;
-    }
+    .contact-us { background-size: cover;}
     .founders .box1 {
         padding-top: 0;
     }
@@ -1307,19 +1373,6 @@ button.sqr-btn:focus{outline: none;}
     }
     .top-navbar{
         display: none;
-    }
-    p.section-title{
-        font-size: 60px;
-        line-height: 55px !important;
-    }
-    p.section-details,
-    .section-title-details {
-        font-size: 20px;
-        line-height: 35px;
-    }
-    p.section-title {
-        font-size: 50px;
-        line-height: 40px !important;
     }
     p.section-details{margin-top: 1rem;}
     .partners p.section-title,
@@ -1345,15 +1398,12 @@ button.sqr-btn:focus{outline: none;}
         width: 70%;
         text-align: center;
     }
-    .facility .img {
-        margin-top: 3rem;
-    }
     .news-slide p.news-headline,
     p.location span{
         font-size: 20px;
     }
     p.count{
-        font-size: 50px;
+        font-size: 40px;
         margin-top: 1rem;
     }
     p.partner-title-details,
@@ -1381,6 +1431,24 @@ button.sqr-btn:focus{outline: none;}
 }
 
 @media(max-width:767px){
+    .container{
+        /* width: calc(100vw - 2rem); */
+        padding: 0 1rem;
+    }
+    .contact-us .wrap {
+        height: fit-content;
+        padding: 20px 0;
+    }
+    .meet-squad p.section-title, .meet-squad p.section-title-details{text-align: center;}
+
+    p.partner-title-details {
+        font-size: 18px;
+        line-height: 1.6em;
+    }
+    .counter-section {
+        max-width: 500px;
+        margin: auto;
+    }
     #testimonial .carousel-caption img{
         margin-top: 1rem;
     }
@@ -1388,10 +1456,6 @@ button.sqr-btn:focus{outline: none;}
     .banner-title .title-2{font-size: 16px;}
     p.section-title{font-size: 40px;}
     section.section{padding: 30px 15px 30px 15px;}
-    p.section-details, .section-title-details {
-        font-size: 16px;
-        line-height: 26px;
-    }
     section.news-slide{padding-top: 4rem;}
     footer{padding: 1rem;}
     .infos .nav a{font-size: 12px;}
@@ -1401,6 +1465,7 @@ button.sqr-btn:focus{outline: none;}
 
 }
 @media (max-width: 576px) { 
+    .facility .img{height: 20rem;}
     .mhn-slide .owl-prev, .mhn-slide .owl-next {
         width: 40px;
         height: 40px;
@@ -1413,11 +1478,13 @@ button.sqr-btn:focus{outline: none;}
         font-size: 14px;
     }
     .tour-place-slide{
-        padding-top: 6rem !important;
+        padding-top: 3rem !important;
     }
+    .facility img{display: none;}
     .mhn-slide.owl-carousel {
         padding-top: 2rem;
     }
+    .facility-title, .facility-details{text-align: center;}
     .facility-details {
         font-size: 18px;
         line-height: 30px;
@@ -1430,9 +1497,6 @@ button.sqr-btn:focus{outline: none;}
         font-size: 17px;
         line-height: 12px;
         padding: 0;
-    }
-    section:nth-child(6){
-        padding-top: 10rem !important;
     }
     .sqr-btn{
         padding: 15px 25px;

@@ -1,3 +1,11 @@
+$('.bar-icon').click(function(){
+    $('.responsive-nav').toggleClass('show-nav');
+    $('.header').toggleClass('show')
+});
+$('.parent1').click(function(){
+    $('.responsive-nav').toggleClass('show-dropdown');
+});
+
 $('.carousel').carousel({
     delay: 1000,
     interval: 3000
