@@ -37,6 +37,9 @@ a, a:hover{
 ul{
     list-style: none;
 }
+input, select{
+    width: 100%;
+}
 .clear-both{clear: both;}
 header.header {
     position: fixed;
@@ -333,7 +336,6 @@ p.section-details{
 
 
 /* Owl Carousel */
-/* @-webkit-keyframes L_circle_rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes L_circle_rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes L_stroke_rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}12.5%{-webkit-transform:rotate(135deg);transform:rotate(135deg)}25%{-webkit-transform:rotate(270deg);transform:rotate(270deg)}37.5%{-webkit-transform:rotate(405deg);transform:rotate(405deg)}50%{-webkit-transform:rotate(540deg);transform:rotate(540deg)}62.5%{-webkit-transform:rotate(675deg);transform:rotate(675deg)}75%{-webkit-transform:rotate(810deg);transform:rotate(810deg)}87.5%{-webkit-transform:rotate(945deg);transform:rotate(945deg)}100%{-webkit-transform:rotate(1080deg);transform:rotate(1080deg)}}@keyframes L_stroke_rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}12.5%{-webkit-transform:rotate(135deg);transform:rotate(135deg)}25%{-webkit-transform:rotate(270deg);transform:rotate(270deg)}37.5%{-webkit-transform:rotate(405deg);transform:rotate(405deg)}50%{-webkit-transform:rotate(540deg);transform:rotate(540deg)}62.5%{-webkit-transform:rotate(675deg);transform:rotate(675deg)}75%{-webkit-transform:rotate(810deg);transform:rotate(810deg)}87.5%{-webkit-transform:rotate(945deg);transform:rotate(945deg)}100%{-webkit-transform:rotate(1080deg);transform:rotate(1080deg)}}@-webkit-keyframes L_stroke_left_grow{0%,100%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}50%{-webkit-transform:rotate(-140deg);transform:rotate(-140deg)}}@keyframes L_stroke_left_grow{0%,100%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}50%{-webkit-transform:rotate(-140deg);transform:rotate(-140deg)}}@-webkit-keyframes L_stroke_right_grow{0%,100%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}50%{-webkit-transform:rotate(140deg);transform:rotate(140deg)}}@keyframes L_stroke_right_grow{0%,100%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}50%{-webkit-transform:rotate(140deg);transform:rotate(140deg)}}.loader-circle{top:50%;left:50%;z-index:1;color:#444;margin-top:-1em;margin-left:-1em;position:absolute;-webkit-animation:L_circle_rotate 1.568s linear infinite both;animation:L_circle_rotate 1.568s linear infinite both}.loader-circle .loader-stroke-left:before,.loader-circle .loader-stroke-right:before,.loader-circle:before{content:'';display:block;border-style:solid;border-width:.21429em;border-color:currentColor}.loader-circle,.loader-circle .loader-stroke-left,.loader-circle .loader-stroke-left:before,.loader-circle .loader-stroke-right,.loader-circle .loader-stroke-right:before,.loader-circle:before{width:2em;height:2em;border-radius:50%;box-sizing:border-box}.loader-circle .loader-stroke-left:before,.loader-circle .loader-stroke-right{position:absolute;clip:rect(0 2em 2em 1em)}.loader-circle .loader-stroke-left,.loader-circle .loader-stroke-right:before{position:absolute;clip:rect(0 1em 2em 0)}.loader-circle:before{position:absolute;clip:rect(0 1.05em 1em .95em)}.loader-circle .loader-stroke-left,.loader-circle .loader-stroke-right,.loader-circle:before{-webkit-animation:L_stroke_rotate 5332ms cubic-bezier(.4,0,.2,1) infinite both;animation:L_stroke_rotate 5332ms cubic-bezier(.4,0,.2,1) infinite both}.loader-circle .loader-stroke-right:before{-webkit-animation:L_stroke_right_grow 1333ms cubic-bezier(.4,0,.2,1) infinite both;animation:L_stroke_right_grow 1333ms cubic-bezier(.4,0,.2,1) infinite both}.loader-circle .loader-stroke-left:before{-webkit-animation:L_stroke_left_grow 1333ms cubic-bezier(.4,0,.2,1) infinite both;animation:L_stroke_left_grow 1333ms cubic-bezier(.4,0,.2,1) infinite both} */
 .mhn-slide { margin-top: -40px;}
 .mhn-slide .mhn-item{width:100%;padding:10px 30px 10px 1px;}
 .mhn-slide .mhn-inner{width:100%;height:100%;}
@@ -344,7 +346,6 @@ p.section-details{
 .mhn-slide .mhn-text p{max-height:4.5em;overflow:hidden}
 .mhn-slide .owl-stage-outer{z-index:1; margin-top: .5rem;}
 .mhn-slide .owl-nav svg{color:#AFAFAF}
-/* .mhn-slide .owl-nav .disabled{display:none} */
 .mhn-slide .owl-prev,
 .mhn-slide .owl-next{
 	top:110px;
@@ -619,6 +620,7 @@ p.partner-title-details{
     text-align: center;
     color: #FFFFFF; 
     padding: 16px 25px;
+    cursor: pointer;
     transition: all .3s ease;
 }
 .sqr-btn:hover{
@@ -666,10 +668,12 @@ p.partner-title-details{
 .shop .container.wrap2{
     top: 33rem;
 }
-
 footer{
     background: #122833;
     padding: 3rem;
+    /* position: fixed;
+    width: 100%;
+    bottom: 0; */
 }
 footer p, footer a{
     font-family: 'Quicksand', Sans-serif;
@@ -1168,6 +1172,48 @@ p.price{
 .rank img{max-height: 16px; object-fit: contain;}
 .sqr-book .sqr-btn{padding: 16px 10px;}
 
+.find-tours form{
+    padding: 2rem 0;
+}
+button.sqr-btn{
+    border: none;
+    width: 100%;
+    padding: 8px 25px;
+    border-radius: 6px;
+}
+button.sqr-btn:hover{
+    background: var(--light-pink); 
+    color: var(--pink);
+}
+button.sqr-btn:focus{outline: none;}
+.find-tours form input,
+.find-tours form select{
+    padding: .375rem 1.75rem .375rem .75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+.find-tours form input:focus,
+.find-tours form select:focus{
+    outline: 3px solid var(--light-blue);
+}
+
+.package-card{font-family: 'Raleway', sans-serif;}
+.package-card img{
+    width: 100%;
+} 
+.package-card .cTitle{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.8em;
+    color: #000;
+    margin-right: 16px;
+}
+
+.tours-wrap{min-height: 15vh;}
+.package-card .tCost span{
+}
+.package-card .sqr-btn{}
+
 
 
 
@@ -1179,11 +1225,6 @@ p.price{
     .banner-title .title-1 {
         font-size: 80px;
         line-height: 60px;
-    }
-    .banner-title .title-1, 
-    .section-title,
-    p.section-title{
-        /* margin-bottom: 1rem !important; */
     }
     .banner-title .title-2{
         font-size: 20px;
@@ -1299,17 +1340,12 @@ p.price{
         width: 70%;
         text-align: center;
     }
-    .facility-title{
-    }
     .facility .img {
         margin-top: 3rem;
     }
     .news-slide p.news-headline,
     p.location span{
         font-size: 20px;
-    }
-    .news-slide .section-title-wrap{
-        /* width: 93%; */
     }
     p.count{
         font-size: 50px;

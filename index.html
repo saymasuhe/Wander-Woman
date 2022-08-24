@@ -21,6 +21,9 @@
     <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- fontawesome 5-->
     <script src="https://kit.fontawesome.com/8803f9618d.js" crossorigin="anonymous"></script>
@@ -49,7 +52,6 @@
                 <li><a class="" href="index.html">Discover</a></li>
                 <li><a class="" href="about.html">About Us</a></li>
                 <li><a class="" href="blog.html">Blog</a></li>
-                <li><a class="" href="listPage.html">Blog List</a></li>
             </ul>
         </div>
     </header>
@@ -71,13 +73,13 @@
             <div class="top-navbar">
                 <div class="container">
                     <header class="d-flex align-items-center justify-content-between p-2 px-md-4 w-100">
-                        <img src="assets/images/logo1.png" alt="" class="logo">
+                        <a href="index.html"><img src="assets/images/logo1.png" alt="" class="logo"></a>
                         <ul class="navigation mb-0">
                             <li>
                                 <div class="dropdown">
                                     <a class="" class="dropbtn" href="index.html">Discover <i class="fas fa-caret-down"></i></a>
                                     <div class="dropdown-content">
-                                      <a href="#">Guided Tours</a>
+                                      <a href="listPage.html">Guided Tours</a>
                                       <a href="#">Travel Consultation</a>
                                       <a href="#">Upcoming Events</a>
                                       <a href="#">Tribe Club</a>
@@ -87,9 +89,7 @@
                                 </div>
                             </li>
                             <li><a class="" href="about.html">About Us</a></li>
-                            <li><a class="p-2" href="blog.html">Blog</a></li>
-                            <li><a class="" href="listPage.html">Blog List</a></li>
-                            <!-- <li><a class="login-btn mbtn" href="#">Login</a></li> -->
+                            <li><a class="p-2" href="#blog">Blog</a></li>
                         </ul>
                     </header>
                 </div>
@@ -173,7 +173,7 @@
         </section>
 
         <!-- discover new places -->
-        <section class="news-slide tour-place-slide">
+        <section class="news-slide tour-place-slide" id="blog">
             <div class="container">
                 <div class="section-title-wrap">
                     <p class="section-title">discover new places</p>

@@ -43,4 +43,25 @@ $(document).ready(function(){
         speed: 800,
         refreshInterval: 50,
     });
-  });
+});
+
+$(function() {
+    $('input[name="daterange"]').daterangepicker({
+        opens: 'left'
+    }, function(start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+});
+
+// PAGINATION
+$('#pagination-here').bootpag({
+    total: 10,          
+    page: 1,            
+    maxVisible: 5,     
+    leaps: true,
+    href: "#result-page-{{number}}",
+})
+
+$('#pagination-here').on("page", function(event, num){
+    // $("#content").html("Page " + num); 
+});
