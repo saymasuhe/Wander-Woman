@@ -1218,7 +1218,12 @@ button.sqr-btn:focus{outline: none;}
 
 
 
+
 @media (max-width: 1400px){
+    
+    .find-tours h6,
+    button.sqr-btn{margin-top: 1rem;}
+    button.sqr-btn{padding: 15px 25px;}
     a.banner-btn{
         font-size: 14px;
     }
