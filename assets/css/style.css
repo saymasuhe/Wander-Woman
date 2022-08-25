@@ -181,15 +181,6 @@ header .responsive-nav.show-nav{
     min-width: 10em;
     background: var(--pink);
     transition: .4s;
-    /* width: auto;
-    display: block;
-    top: auto;
-    left: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    min-width: 10em;
-    max-width: 1000px;
-    background: var(--pink); */
 }
 
 .top-navbar .dropdown-content a {
@@ -351,7 +342,15 @@ p.section-details{
 .mhn-slide .mhn-item{width:100%;padding:10px 30px 10px 1px;}
 .mhn-slide .mhn-inner{width:100%;height:100%;}
 .mhn-slide .mhn-item img{display:none}
-.mhn-slide .mhn-img{min-height:200px;overflow:hidden;height:100%;width:100%;color:white;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=) #eee no-repeat center/cover;position:relative}
+.mhn-slide .mhn-img{
+    min-height:200px;
+    overflow:hidden;
+    height:100%;
+    width:100%;
+    color:white;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=) #eee no-repeat center/cover;
+    position:relative
+}
 .mhn-slide .mhn-text{text-align:center;padding:0 10px}
 .mhn-slide .mhn-text h4{font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
 .mhn-slide .mhn-text p{max-height:4.5em;overflow:hidden}
@@ -397,7 +396,6 @@ p.section-details{
     color: #000;
 }
 .news-slide .section-title-wrap {
-    /* position: absolute; */
     top: 60px;
 }
 
@@ -486,8 +484,6 @@ p.location i{
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
-    /* background: url(../images/maldives-island.jpg);
-    background-size: cover; */
 }
 .facility .img iframe{
     width: 100%;
@@ -513,7 +509,6 @@ p.count-title{
 }
 
 section.testimonial{
-    /* background: #FFFEF2; */
     background: linear-gradient(112deg, #FFFEF2 50%, antiquewhite 50%);
 }
 
@@ -662,7 +657,6 @@ p.partner-title-details{
 }
 .shop .gradient{
     height: 85rem;
-    /* background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%); */
 }
 .shop .wrap{
     position: absolute;
@@ -765,14 +759,6 @@ footer ul li a:hover{
 .founders .box2 p.section-details {
     padding-bottom: 3rem;
 }
-/* a.read{
-    font-family: 'Quicksand', Sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: var(--pink);
-    display: block;
-    text-align: left;
-} */
 .founder-box {
     z-index: 1;
 }
@@ -794,7 +780,6 @@ footer ul li a:hover{
     padding-left: 2rem;
 }
 .founder-box p.section-title {
-    /* line-height: 65px; */
     margin-bottom: 2rem !important;
 }
 .meet-squad p.section-title,
@@ -819,7 +804,6 @@ footer ul li a:hover{
 .img-wrap img{
     max-height: 230px;
     background: url(../images/blob1.png) center no-repeat;
-    /* transition: all .3s ease; */
 }
 .img-wrap:hover > img{
     background: url(../images/blob2.png) center no-repeat;
@@ -837,7 +821,6 @@ footer ul li a:hover{
     background: url(../images/maldives-island.jpg);
     padding-bottom: 20rem;
 }
-.contact-us p.section-title{text-align: left; }
 .contact-us p.section-details{
     padding-bottom: 10px;
     border-bottom: 1px solid #00000069;
@@ -875,6 +858,11 @@ footer ul li a:hover{
     font-size: 20px;
     line-height: 29px;
 }
+.contact-us p.section-title{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem !important;
+}
 
 
 /* timeline */
@@ -896,7 +884,6 @@ footer ul li a:hover{
     padding:0;
     margin:0;
     padding-top:15px;
-    z-index:9999;
     position:absolute;
     width:100%;
     margin-top:-40px
@@ -980,7 +967,6 @@ footer ul li a:hover{
 .timeline #progress-content-section {
     width:90%;
     margin: auto;
-    /* border: 1px solid var(--light-pink); */
     background: var(--light-pink);
     border-radius: 10px;
 }
@@ -1064,7 +1050,6 @@ footer ul li a:hover{
 }
 .infos .tab-pane{
     padding: 1rem 0;
-    /* background: #F9F9F9; */
     font-family: "Quicksand", Sans-serif;
     font-size: 18px;
     line-height: 1.8em;
@@ -1142,11 +1127,9 @@ footer ul li a:hover{
 
 p.status {
     font-family: 'Quicksand-bold', Sans-serif;
-    /* background: #9aec95; */
     background: #42d665;
     color: #fff;
     font-size: 14px;
-    /* display: inline-block; */
     padding: 4px 16px;
     border-radius: 8px;
     font-weight: 600;
@@ -1238,7 +1221,6 @@ button.sqr-btn:focus{outline: none;}
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     font-size: 20px;
-    /* padding-bottom: 2rem; */
 }
 .package-card .sqr-btn{
     padding: 10px;
@@ -1265,13 +1247,12 @@ button.sqr-btn:focus{outline: none;}
     
     .find-tours h6,
     button.sqr-btn{margin-top: 1rem;}
-    /* button.sqr-btn{padding: 15px 25px;} */
     a.banner-btn{
         font-size: 14px;
     }
     .banner-title .title-1 {
         font-size: 80px;
-        line-height: 60px;
+        line-height: 1.5em;
     }
     .banner-title .title-2{
         font-size: 20px;
@@ -1283,9 +1264,6 @@ button.sqr-btn:focus{outline: none;}
         text-align: right;
     }
 }
-/* @media (min-width: 1200px){
-    .overseas .container{padding-top: 3rem;}
-} */
 
 @media (max-width: 1200px){
     
@@ -1346,11 +1324,6 @@ button.sqr-btn:focus{outline: none;}
         margin-bottom: 3rem;
     }
     .contact-us p.section-details,
-    .contact-us p.section-title{
-        text-align: center;
-        width: 100%;
-        margin-bottom: 1rem !important;
-    }
     .contact-us { background-size: cover;}
     .founders .box1 {
         padding-top: 0;
@@ -1432,7 +1405,6 @@ button.sqr-btn:focus{outline: none;}
 
 @media(max-width:767px){
     .container{
-        /* width: calc(100vw - 2rem); */
         padding: 0 1rem;
     }
     .contact-us .wrap {

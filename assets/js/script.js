@@ -61,15 +61,8 @@ $(function() {
     });
 });
 
-// PAGINATION
-$('#pagination-here').bootpag({
-    total: 10,          
-    page: 1,            
-    maxVisible: 5,     
-    leaps: true,
-    href: "#result-page-{{number}}",
-})
 
-$('#pagination-here').on("page", function(event, num){
-    // $("#content").html("Page " + num); 
+$('#testimonial_slider').carousel({
+    dots: true,
+    interval: 10000
 });
