@@ -423,9 +423,6 @@ section.news-slide {
     position: relative;
     padding: 4rem 0;
 }
-.tour-place-slide{
-    /* padding: 5rem 0 !important; */
-}
 .destination-card{
     margin-top: 1rem;
 }
@@ -546,11 +543,6 @@ p.count-title{
 }
 .counter-section p.section-title, p.count{
     color: #fff;
-}
-section.testimonial{
-    /* background: #FFFEF2; */
-    /* background: linear-gradient(112deg, #FFFEF2 50%, antiquewhite 50%); */
-    /* padding-top: 0px; */
 }
 
 section.testimonial .carousel-caption p{
@@ -723,16 +715,6 @@ p.partner-title-details{
 }
 .shop img{
     object-fit: cover;
-}
-.shop .container.wrap1,
-.shop .container.wrap2 {
-    /* position: absolute;
-    top: 6rem;
-    left: 50%;
-    transform: translateX(-50%); */
-}
-.shop .container.wrap2{
-    /* top: 33rem; */
 }
 footer{
     background: #122833;
@@ -1225,9 +1207,6 @@ p.price input{
     border: none;
     display: inline-block;
 }
-#price-count{
-
-}
 #price-count input{
     width: fit-content;
     padding: 4px 10px;
@@ -1621,6 +1600,11 @@ button.sqr-btn:focus{outline: none;}
     background: var(--pink);
     color: #fff;
 }
+.partners-table img{
+    height: 30px;
+    max-width: 90px;
+    object-fit: contain;
+}
 
 span.starter,
 .tr-detls p.facility-title{
@@ -1678,6 +1662,16 @@ p.facility-title.cost{font-size: 26px;font-style: italic;}
     float: right;
     padding: 10px 20px;
 }
+.l-img{
+    background: var(--light-pink);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+.l-img img{width: 100%; height: 100%; object-fit: cover;}
+.t-ldrs .col-12{margin-bottom: 2rem;}
 
 
 @media (max-width: 1400px){
@@ -1938,6 +1932,9 @@ p.facility-title.cost{font-size: 26px;font-style: italic;}
 
 }
 @media (max-width: 575.99px) { 
+    .partners-table img {
+        max-width: 70px;
+    }
     .appointment-form .fs-title {
         font-size: 18px;
     }
